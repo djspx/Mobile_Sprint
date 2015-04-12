@@ -1,0 +1,28 @@
+{
+    "user":[
+       {
+          "userId":1,
+          "email":"Johnsmith@gmail.com",
+          "password":"password123",
+          "firstName":"John",
+          "lastName":"Smith",
+          "bio":"I like to program as well as teach at sheridan college",
+          "skills":"Java, SQL, mongoDB",
+          "address":"123 ABC St",
+          "Status":"Active",
+          "accountType":"Staff"
+      },
+      {
+          "userId":2,
+          "email":"Johnsmith@gmail.com",
+          "password":"password123",
+          "firstName":"John",
+          "lastName":"Smith",
+          "bio":"I like to program as well as teach at sheridan college",
+          "skills":"Java, SQL, mongoDB",
+          "address":"123 ABC St",
+          "Status":"Active",
+          "accountType":"Staff"
+      }
+   ]
+}
