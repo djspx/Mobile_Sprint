@@ -1,0 +1,28 @@
+{
+   "task":[
+      {
+         "taskId":"1",
+         "name":"string",
+         "description":"string",
+         "userIdAssignedTo":"int",
+         "dueDate":"Date",
+         "status":"enum"
+      },
+      {
+         "taskId":"2",
+         "name":"string",
+         "description":"string",
+         "userIdAssignedTo":"int",
+         "dueDate":"Date",
+         "status":"enum"
+      },
+      {
+         "taskId":"3",
+         "name":"string",
+         "description":"string",
+         "userIdAssignedTo":"int",
+         "dueDate":"Date",
+         "status":"enum"
+      }
+   ]
+}

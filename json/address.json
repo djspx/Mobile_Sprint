@@ -1,0 +1,34 @@
+{
+   "address":[
+      {
+         "addressId":"1",
+         "line1":"string",
+         "line2":"string",
+		 "line3":"string",
+		 "city":"string",
+		 "provinceState":"string",
+		 "country":"string",
+		 "postalZipcode":"string"
+      },
+      {
+         "addressId":"2",
+         "line1":"string",
+         "line2":"string",
+		 "line3":"string",
+		 "city":"string",
+		 "provinceState":"string",
+		 "country":"string",
+		 "postalZipcode":"string"
+      },
+      {
+         "addressId":"3",
+         "line1":"string",
+         "line2":"string",
+		 "line3":"string",
+		 "city":"string",
+		 "provinceState":"string",
+		 "country":"string",
+		 "postalZipcode":"string"
+      }
+   ]
+}

@@ -1,0 +1,32 @@
+body{
+  background:#567;
+  font-family:'Open Sans',sans-serif;
+}
+
+
+
+#login{
+  width:30%;
+  margin:auto;
+  margin-top:8%;
+}
+
+form{
+  background:white;
+  padding:6% 4%;
+}
+
+input[type="email"],input[type="password"]{
+  width:92%;
+  background:white;
+  margin-bottom:4%;
+  border:1px solid #ccc;
+  padding:4%;
+  font-family:'Open Sans',sans-serif;
+  font-size:95%;
+  color:#555;
+}
+
+#submit{
+  width:100%;
+}

@@ -1,0 +1,19 @@
+{
+   "invite":[
+      {
+         "inviteId":"1",
+         "status":"enum",
+         "emailInviteTo":"string"
+      },
+      {
+         "inviteId":"2",
+         "status":"enum",
+         "emailInviteTo":"string"
+      },
+      {
+         "inviteId":"3",
+         "status":"enum",
+         "emailInviteTo":"string"
+      }
+   ]
+}

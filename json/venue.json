@@ -1,0 +1,28 @@
+{
+   "venue":[
+      {
+         "venueId":"1",
+         "name":"string",
+         "description":"string",
+		 "parkingAvailability":"boolean",
+		 "publicTransportationAccess":"boolean",
+		 "address":"Address",
+      },
+      {
+         "venueId":"2",
+         "name":"string",
+         "description":"string",
+		 "parkingAvailability":"boolean",
+		 "publicTransportationAccess":"boolean",
+		 "address":"Address",
+      },
+      {
+         "venueId":"3",
+         "name":"string",
+         "description":"string",
+		 "parkingAvailability":"boolean",
+		 "publicTransportationAccess":"boolean",
+		 "address":"Address",
+      }
+   ]
+}

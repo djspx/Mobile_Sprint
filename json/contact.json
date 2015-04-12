@@ -1,0 +1,25 @@
+{
+   "contact":[
+      {
+         "firstName":"string",
+         "lastName":"string",
+         "phoneNumber":"string",
+		 "email":"boolean",
+		 "address":"Address"
+      },
+      {
+         "firstName":"string",
+         "lastName":"string",
+         "phoneNumber":"string",
+		 "email":"boolean",
+		 "address":"Address"
+      },
+      {
+         "firstName":"string",
+         "lastName":"string",
+         "phoneNumber":"string",
+		 "email":"boolean",
+		 "address":"Address"
+      }
+   ]
+}

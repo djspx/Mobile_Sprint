@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        <title>CARP Connects UI Template</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper blue lighten-1">
+                <div class="container">
+                    <a class="brand-logo center" href="index.html">CARP Connect</a>
+                    <a data-activates="side-nav" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                    <ul class="side-nav fixed" id="side-nav">
+                        <li class="logo">
+                            <a id="logo-container" href="index.html">
+                                <img id="front-page-logo" src="images/logo.png" class="responsive-img">
+                            </a>
+                        </li>
+                        <li class="clearfix"></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active href-disabled"><a href="account.html">Account Management</a></li>
+                        <li><a href="calendar.html">Calendar</a></li>
+                        <li class="divider"></li>
+						<li><a href="invite.html">Invite New User</a></li>
+                        <li><a href="pastevents.html">View Past Events</a></li>
+                        <li><a href="reports.html">View Reports</a></li>
+                        <li class="divider"></li>
+                        <li><a href="login.html">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <main>
+            <div class="row">
+                <div class="col s12 m7 l8">
+
+                     <h4 id="headerName" class="center"></h4>
+                    <div class="row ">
+                        <div class="col s2">
+                            <img src="images/profile.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                        </div>
+                        <div id="name" class="input-field col s10 right">
+                            
+                            
+                            
+                        </div>
+                        <br></br><br></br><br></br>
+                        <div class="row">
+                            <div id="bio" class="input-field col s12">
+                              
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="skills" class="input-field col s12">
+                               
+                            </div>
+                        </div>
+                        <a  href="index.html"class="waves-effect waves-light btn"><i class="mdi-content-send right"></i>Save</a>
+                        <br> <br>
+                        <h4>Change Your Password</h4>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="curpassword" type="password" >
+                                <label for="password">Current Password</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="newpassword" type="password" >
+                                <label for="password">New Password</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="new2password" type="password" >
+                                <label for="password">Confirm New Password</label>
+
+                            </div>
+
+                        </div>
+                        <a href="index.html" class="waves-effect waves-light btn"><i class="mdi-navigation-cancel right"></i>Save Password</a>
+                    </div>
+
+                </div>
+                <div class="col s12 m5 l4">
+                    <h5 class="header">Calendar</h5>
+                    <div id="calendar">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js"></script>
+        <script>
+               $(document).ready(function() {
+        $.ajax({
+            type: "GET",
+            url: "json/user.json",
+            dataType: "json",
+            success: processUser,
+            error: function() {
+                alert("error");
+            }
+        });
+    });
+
+
+    function processUser(data) {
+
+        var name = data.user[1].firstName + " " + data.user[1].lastName;
+        $("#name").html("<input id='name' type='text' value='" + name  + "'>" +   "<label class='active' for='name'>Display Name</label>");
+        $("#headerName").html(name + "'s Profile");
+        
+                var bio = data.user[1].bio;
+        $("#bio").html("<textarea id='biography' class='materialize-textarea' length='255' maxlength='255'>" + bio +"</textarea>" + "<label class='active' for='biography'>Biography<i class='mdi-editor-mode-edit right'></i></label>");
+        
+          
+        
+        var skills = data.user[1].skills;
+        $("#skills").html("<textarea id='skills' class='materialize-textarea' length='255' maxlength='255'>" + skills +"</textarea>" + "<label class='active' for='skills'>Skills<i class='active mdi-editor-mode-edit right'></i></label>");
+             
+        
+        }
+    
+            
+            $(document).ready(function () {
+                $(".button-collapse").sideNav();
+                $("#calendar").fullCalendar({
+                    contentHeight: 300
+                });
+            });
+        </script>
+    </body>
+</html>
