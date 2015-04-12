@@ -2,111 +2,24 @@
    "event":[
       {
          "id":"1",
-         "owner":"User",
-         "name":"string",
-         "theme":"enum",
-         "status":"enum",
-         "dateTime":"Date",
+         "owner":"Brandon White",
+         "name":"Financial Planning",
+         "theme":"Financial",
+         "status":"In Progress",
+         "dateTime":"2015-04-23T18:00:00",
          "tasks":[
             {
-               "taskId":"int",
-               "name":"string",
-               "description":"string",
-               "userIdAssignedTo":"int",
-               "dueDate":"Date",
-               "status":"enum"
-            },
-            {
-               "taskId":"int",
-               "name":"string",
-               "description":"string",
-               "userIdAssignedTo":"int",
-               "dueDate":"Date",
-               "status":"enum"
-            },
-            {
-               "taskId":"int",
-               "name":"string",
-               "description":"string",
-               "userIdAssignedTo":"int",
-               "dueDate":"Date",
-               "status":"enum"
+               "taskId":"1",
+               "name":"Hire Caterer",
+               "description":"Hire a caterer for 50-75 people",
+               "userIdAssignedTo":"1",
+               "dueDate":"2015-04-10T18:00:00",
+               "taskType":"Vendor",
+               "Vendor":"Bobs Food Service",
+               "budget":"350.00",
+               "status":"Incomplete"
             }
-         ],
-         "venue":"Venue",
-         "themeId":"enum"
-      },
-      {
-         "id":"2",
-         "owner":"User",
-         "name":"string",
-         "theme":"enum",
-         "status":"enum",
-         "dateTime":"Date",
-         "tasks":[
-            {
-               "taskId":"int",
-               "name":"string",
-               "description":"string",
-               "userIdAssignedTo":"int",
-               "dueDate":"Date",
-               "status":"enum"
-            },
-            {
-               "taskId":"int",
-               "name":"string",
-               "description":"string",
-               "userIdAssignedTo":"int",
-               "dueDate":"Date",
-               "status":"enum"
-            },
-            {
-               "taskId":"int",
-               "name":"string",
-               "description":"string",
-               "userIdAssignedTo":"int",
-               "dueDate":"Date",
-               "status":"enum"
-            }
-         ],
-         "venue":"Venue",
-         "themeId":"enum"
-      },
-      {
-         "id":"3",
-         "owner":"User",
-         "name":"string",
-         "theme":"enum",
-         "status":"enum",
-         "dateTime":"Date",
-         "tasks":[
-            {
-               "taskId":"int",
-               "name":"string",
-               "description":"string",
-               "userIdAssignedTo":"int",
-               "dueDate":"Date",
-               "status":"enum"
-            },
-            {
-               "taskId":"int",
-               "name":"string",
-               "description":"string",
-               "userIdAssignedTo":"int",
-               "dueDate":"Date",
-               "status":"enum"
-            },
-            {
-               "taskId":"int",
-               "name":"string",
-               "description":"string",
-               "userIdAssignedTo":"int",
-               "dueDate":"Date",
-               "status":"enum"
-            }
-         ],
-         "venue":"Venue",
-         "themeId":"enum"
+         ]
       }
-   ]
+     ]
 }
