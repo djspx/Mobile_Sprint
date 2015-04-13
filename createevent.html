@@ -1,194 +1,317 @@
 <!DOCTYPE html>
 <html>
-    <head lang="en">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-        <title>CARP Connects UI Template</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css" />
-        <link rel="stylesheet" href="css/main.css" />
-    </head>
-    <body>
-        <nav>
-            <div class="nav-wrapper blue lighten-1">
-                <div class="container">
-                    <a class="brand-logo center" href="index.html">CARP Connect</a>
-                    <a data-activates="side-nav" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-                    <ul class="side-nav fixed" id="side-nav">
-                        <li class="logo">
-                            <a id="logo-container" href="index.html">
-                                <img id="front-page-logo" src="images/logo.png" class="responsive-img">
-                            </a>
-                        </li>
-                        <li class="clearfix"></li>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="account.html">Account Management</a></li>
-                        <li><a href="calendar.html">Calendar</a></li>
-                        <li class="divider"></li>
-                        <li class="active href-disabled"><a href="createevent.html">Create New Event</a></li>
-                        <li><a href="pastevents.html">View Past Events</a></li>
-                        <li><a href="reports.html">View Reports</a></li>
-                        <li class="divider"></li>
-                        <li><a href="login.html">Log Out</a></li>
-                    </ul>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>CARP Connects UI Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper blue lighten-1">
+        <div class="container">
+            <a class="brand-logo center" href="index.html">CARP Connect</a>
+            <a data-activates="side-nav" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            <ul class="side-nav fixed" id="side-nav">
+                <li class="logo">
+                    <a id="logo-container" href="index.html">
+                        <img id="front-page-logo" src="images/logo.png" class="responsive-img">
+                    </a>
+                </li>
+                <li class="clearfix"></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="account.html">Account Management</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li class="divider"></li>
+                <li class="active href-disabled"><a href="createevent.html">Create New Event</a></li>
+                <li><a href="pastevents.html">View Past Events</a></li>
+                <li><a href="reports.html">View Reports</a></li>
+                <li class="divider"></li>
+                <li><a href="login.html">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main>
+    <div class="row">
+        <div class="col s12 m7 l8">
+            <div class="section">
+                <div class="row">
+                    <div class="col s12 center">
+                        <h2>Create Event</h2>
+                    </div>
                 </div>
-            </div>
-        </nav>
-        <main>
-            <div class="row">
-                <div class="col s12 m7 l8">
-                    <div class="section">
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s11">
+                                <input id="event_name" type="text" class="validate" length="45" maxlength="45">
+                                <label for="event_name">Event Name</label>
+                            </div>
+                            <div class="input-field col s1">
+                                <a class="btn-floating tooltipped" data-position="bottom" data-delay="50"
+                                   data-tooltip="Import Past Event"><i class="mdi-communication-import-export"></i></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s3">
+                                <input type="date" id="date" class="datepicker">
+                                <label for="date">Date</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="description" class="materialize-textarea" length="255"
+                                          maxlength="255"></textarea>
+                                <label for="description">Description<i class="mdi-editor-mode-edit right"></i></label>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="range-field col s12">
+                                <label for="event_budget">Event Budget ($)</label>
+                                <input type="range" id="event_budget" value="0" min="0" max="5000"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <table id="tasktable" class="striped">
+                                <thead>
+                                <tr>
+                                    <th data-field="task">Task</th>
+                                    <th data-field="assignedto">Assigned To</th>
+                                    <th data-field="budget">Budget</th>
+                                    <th data-field="due">Due Date</th>
+                                    <th data-field="button"><a href="#modal1"
+                                                               id="addnewtask"
+                                                               class="btn-floating tooltipped right-align modal-trigger"
+                                                               data-position="bottom" data-delay="50"
+                                                               data-tooltip="Add Task"><i
+                                            class="mdi-content-add"></i></a></th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
                         <div class="row">
                             <div class="col s12 center">
-                                <h2>Create Event</h2>
+                                <a href="index.html" class="waves-effect waves-light btn"><i
+                                        class="mdi-content-send right"></i>Create Event</a>
+                                <a class="waves-effect waves-light btn dynamicWarning"><i
+                                        class="mdi-content-save right"></i>Save</a>
+                                <a href="index.html" class="waves-effect waves-light btn "><i
+                                        class="mdi-navigation-cancel right"></i>Exit</a>
                             </div>
                         </div>
-                        <div class="row">
-                            <form class="col s12">
-                                <div class="row">
-                                    <div class="input-field col s11">
-                                        <input id="event_name" type="text" class="validate" length="45" maxlength="45">
-                                        <label for="event_name">Event Name</label>
-                                    </div>
-                                    <div class="input-field col s1">
-                                        <a class="btn-floating tooltipped" data-position="bottom" data-delay="50" data-tooltip="Import Past Event"><i class="mdi-communication-import-export"></i></a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s3">
-                                        <input type="date" id="date" class="datepicker">
-                                        <label for="date">Date</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <textarea id="description" class="materialize-textarea"length="255" maxlength="255"></textarea>
-                                        <label for="description">Description<i class="mdi-editor-mode-edit right"></i></label>
-                                    </div>
-                                </div>
+                    </form>
 
+                    <!-- Start Modal Structure -->
+                    <div id="modal1" class="modal">
 
-                                <div class="row">
-                                    <div class="range-field col s12">
-                                        <label for="event_buget">Event Budget ($)</label>
-                                        <input type="range" id="event_budget" value ="0" min="0" max="5000" />
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <table class="striped ">
-                                        <thead>
-                                            <tr>
-                                                <th data-field="task">Task</th>
-                                                <th data-field="assignedto">Assigned To</th>
-                                                <th data-field="budget">Budget</th>
-                                                <th data-field="due">Due Date</th>
-                                                <th data-field="button"><a href="addtask.html" class="btn-floating tooltipped right-align" data-position="bottom" data-delay="50" data-tooltip="Add Task"><i class="mdi-content-add"></i></a></th>
-                                            </tr>
-                                        </thead>
+                        <form id="taskform" class="col s12">
 
-                                        <tbody>
-                                            <tr>
-                                                <td >Hire a Caterer</td>
-                                                <td>Ashley Smith</td>
-                                                <td>$1000</td>
-                                                <td colspan="2">Mar 15th</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Find a location</td>
-                                                <td>John Smith</td>
-                                                <td>$1250</td>
-                                                <td colspan="2">Due Mar 10th</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Hire Guest Speaker</td>
-                                                <td>James Smith</td>
-                                                <td>$500</td>
-                                                <td colspan="2">Mar 30th</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                            <div class="modal-content">
+
                                 <div class="row">
                                     <div class="col s12 center">
-                                        <a href="index.html" class="waves-effect waves-light btn"><i class="mdi-content-send right"></i>Create Event</a>
-                                        <a class="waves-effect waves-light btn dynamicWarning"><i class="mdi-content-save right"></i>Save</a>
-                                        <a href="index.html" class="waves-effect waves-light btn "><i class="mdi-navigation-cancel right"></i>Exit</a>
+                                        <h2>Create Task</h2>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m5 l4">
-                    <h5 class="header">Calendar</h5>
-                    <div id="calendar">
+                                <div class="row">
 
-                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="task_name" type="text" class="validate" length="45"
+                                                   maxlength="45">
+                                            <label for="task_name">Task Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s6 m3">
+                                            <input type="date" id="due_date" class="datepicker">
+                                            <label for="due_date">Due Date</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <textarea id="task_description" class="materialize-textarea" length="255"
+                                                      maxlength="255"></textarea>
+                                            <label for="task_description">Description<i
+                                                    class="mdi-editor-mode-edit right"></i></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12 m6">
+                                            <select id="task_type">
+                                                <option value="" disabled selected>Please choose a task type</option>
+                                                <option value="1">Vendor</option>
+                                                <option value="2">Custom</option>
+                                            </select>
+                                            <label>Task Type</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s8">
+                                            <select id="vendor_name">
+                                                <option value="" disabled selected>Please choose a vendor</option>
+                                                <option value="1">Harry's Food Service</option>
+                                                <option value="2">Express Delivery Service</option>
+                                            </select>
+                                            <label>Vendor Name</label>
+                                        </div>
+                                        <div class="input-field col s4">
+                                            <a href="addvendor.html" class="btn-floating tooltipped"
+                                               data-position="bottom" data-delay="50" data-tooltip="Add Vendor"><i
+                                                    class="mdi-content-add"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="range-field col s12">
+                                            <label for="task_budget">Task Budget ($)</label>
+                                            <input type="range" id="task_budget" value="0" min="0" max="750"/>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-bottom: 0;">
+                                        <div class="input-field col s8">
+                                            <select id="assignedTo">
+                                                <option value="" disabled selected>Select Volunteer</option>
+                                                <option value="1">Aaron Beehoo</option>
+                                                <option value="2">Kevin Lee</option>
+                                                <option value="3">Sergio Parracho</option>
+                                                <option value="4">Benjamin Krissilas</option>
+                                            </select>
+                                            <label>Assign to</label>
+                                        </div>
+                                    </div>
 
-                    <div class="row">
-                        <div class="col s12 center">
-                            <div class="card-panel green">
-                                <span class="white-text">Budget Status
-                                    </br>$0/$2750
-                                </span>
+                                </div>
+
                             </div>
-                        </div>
+                            <div class="modal-footer">
+                                <div class="row col s12">
+                                    <div class="input-field col s6 center">
+                                        <button id="addtask" class="waves-effect waves-light btn" type="submit"><i
+                                                class="mdi-content-send right"></i>Add Task
+                                        </button>
+                                    </div>
+                                    <div class="input-field col s6 center">
+                                        <button id="canceltask" class="waves-effect waves-light btn" type="button"><i
+                                                class="mdi-navigation-cancel right"></i>Cancel
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                    <!-- End Modal Structure -->
+
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m5 l4">
+            <h5 class="header">Calendar</h5>
+
+            <div id="calendar">
+
+            </div>
+
+            <div class="row">
+                <div class="col s12 center">
+                    <div class="card-panel green">
+                        <span class="white-text">Budget Status</span>
+                        <br>
+                        <span class="white-text">$</span>
+                        <span id="budget_running" class="white-text">0</span>
+                        <span class="white-text">/</span>
+                        <span class="white-text">$</span>
+                        <span id="budget_total" class="white-text">0</span>
                     </div>
                 </div>
             </div>
-        </main>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $.ajax({
-                    type: "GET",
-                    url: "json/user.json",
-                    dataType: "json",
-                    success: processUser,
-                    error: function() {
-                        alert("error");
-                    }
-                });
-            });
+        </div>
+    </div>
+</main>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".button-collapse").sideNav();
+        $("#calendar").fullCalendar({
+            contentHeight: 300
+        });
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15, // Creates a dropdown of 15 years to control year
+            min: new Date() // Disable past dates
+        });
+        $('select').material_select();
+        $('.tooltipped').tooltip({delay: 50});
+        $('.modal-trigger').leanModal({
+            dismissible: true, // Modal can be dismissed by clicking outside of the modal
+            opacity: .5, // Opacity of modal background
+            in_duration: 300, // Transition in duration
+            out_duration: 200 // Transition out duration
+        });
 
+    });
 
-            function processUser(data) {
+    $("#event_budget").change(function () {
+        $("#budget_total").html($("#event_budget").val());
+    });
 
-                var name = data.user[1].firstName + " " + data.user[1].lastName;
-                $("#name").html("<input id='name' type='text' value='" + name  + "'>" +   "<label class='active' for='name'>Display Name</label>");
-                $("#headerName").html(name + "'s Profile");
+    // reset modal form so you can input new values after adding one in
+    $(".modal-trigger").click(function () {
+        $("#task_name").val('');
+        $("#due_date").val('');
+        $("#task_description").val('');
+        $("#task_type").val( $('#task_type').prop('defaultSelected') );
+        $("#vendor_name").val( $('#vendor_name').prop('defaultSelected') );
+        //$("#task_type").val([]);
+        //$("#vendor_name").val([]);
+        $("#task_budget").val(0);
+        $("#assignedTo").val( $('#assignedTo').prop('defaultSelected') );
+        //$("#assignedTo").val('');
+        $('select').material_select();
+    });
 
-                var bio = data.user[1].bio;
-                $("#bio").html("<textarea id='biography' class='materialize-textarea' length='255' maxlength='255'>" + bio +"</textarea>" + "<label class='active' for='biography'>Biography<i class='mdi-editor-mode-edit right'></i></label>");
+    $("#taskform").submit(function () {
+        var task = {};
+        task.name = $("#task_name").val();
+        task.assignedTo = $("#assignedTo option:selected").text();
+        task.budget = $("#task_budget").val();
+        task.duedate = $("#due_date").val();
 
+        string = "";
+        string += '<tr>' +
+        '<td>' + task.name + '</td>' +
+        '<td>' + task.assignedTo + '</td>' +
+        '<td>$' + task.budget + '</td>' +
+        '<td>' + task.duedate + '</td>' +
+        '</tr>';
 
+        $("#tasktable tbody").append(string);
 
-                var skills = data.user[1].skills;
-                $("#skills").html("<textarea id='skills' class='materialize-textarea' length='255' maxlength='255'>" + skills +"</textarea>" + "<label class='active' for='skills'>Skills<i class='active mdi-editor-mode-edit right'></i></label>");
+        var budget = $("#budget_running").text();
+        budget += task.budget;
+        $("#budget_running").html(parseInt(budget, 10));
 
+        $('#modal1').closeModal();
+        return false;
+    });
 
-            }
-
-
-            $(document).ready(function () {
-                $(".button-collapse").sideNav();
-                $("#calendar").fullCalendar({
-                    contentHeight: 300
-                });
-                $('.datepicker').pickadate({
-                    selectMonths: true, // Creates a dropdown to control month
-                    selectYears: 15, // Creates a dropdown of 15 years to control year
-                    min: new Date() // Disable past dates
-                });
-                $('select').material_select();
-                $('.tooltipped').tooltip({delay: 50});
-                $('.dynamicWarning').on("click", function () {
-                    Materialize.toast('Event Saved, you may now navigate away from this page.', 4000);
-                });
-            });
-        </script>
-    </body>
+    $("#canceltask").click(function () {
+        //$("#modal1").scrollTop("0");
+        $('#modal1').closeModal();
+        return false;
+    });
+</script>
+</body>
 </html>
