@@ -22,20 +22,20 @@
         }
       ],
       "venue": {
-        "venueId": "1",
-        "name": "Woodbine Business Center",
-        "description": "Hire a caterer for 50-75 people",
+        "venueId": "7",
+        "name": "Radisson Hotel Toronto East",
+        "description": "Nice venue in Toronto",
         "parkingAvailability": "true",
         "publicTransportationAccess": "true",
         "address": {
-          "addressId": "1",
-          "line1": "7270 Woodbine Ave.",
+          "addressId": "7",
+          "line1": "55 Hallcrown Place",
           "line2": "",
           "line3": "",
-          "city": "Markham",
+          "city": "Toronto",
           "provinceState": "Ontario",
           "country": "Canada",
-          "postalZipCode": "1"
+          "postalZipCode": "M2J4R1"
         }
       }
     },
@@ -61,20 +61,20 @@
         }
       ],
       "venue": {
-        "venueId": "1",
-        "name": "Woodbine Business Center",
-        "description": "Hire a caterer for 50-75 people",
+        "venueId": "6",
+        "name": "Holiday Inn Toronto East",
+        "description": "Nice venue in Toronto",
         "parkingAvailability": "true",
         "publicTransportationAccess": "true",
         "address": {
-          "addressId": "1",
-          "line1": "7270 Woodbine Ave.",
+          "addressId": "6",
+          "line1": "50 Estate Dr.",
           "line2": "",
           "line3": "",
-          "city": "Markham",
+          "city": "Scarborough",
           "provinceState": "Ontario",
           "country": "Canada",
-          "postalZipCode": "1"
+          "postalZipCode": "M1H2Z1"
         }
       }
     },
@@ -100,20 +100,20 @@
         }
       ],
       "venue": {
-        "venueId": "1",
-        "name": "Woodbine Business Center",
-        "description": "Hire a caterer for 50-75 people",
+        "venueId": "5",
+        "name": "Best Western Plus Executive Inn",
+        "description": "Nice venue in Toronto",
         "parkingAvailability": "true",
         "publicTransportationAccess": "true",
         "address": {
-          "addressId": "1",
-          "line1": "7270 Woodbine Ave.",
+          "addressId": "5",
+          "line1": "38 Estate Dr.",
           "line2": "",
           "line3": "",
-          "city": "Markham",
+          "city": "Toronto",
           "provinceState": "Ontario",
           "country": "Canada",
-          "postalZipCode": "1"
+          "postalZipCode": "M1H 2Z1"
         }
       }
     },
@@ -139,27 +139,27 @@
         }
       ],
       "venue": {
-        "venueId": "1",
-        "name": "Woodbine Business Center",
-        "description": "Hire a caterer for 50-75 people",
+        "venueId": "4",
+        "name": "Scarborough YMCA",
+        "description": "Nice venue in Scarborough",
         "parkingAvailability": "true",
         "publicTransportationAccess": "true",
         "address": {
-          "addressId": "1",
-          "line1": "7270 Woodbine Ave.",
+          "addressId": "4",
+          "line1": "230 Town Centre Court.",
           "line2": "",
           "line3": "",
-          "city": "Markham",
+          "city": "Scarborough",
           "provinceState": "Ontario",
           "country": "Canada",
-          "postalZipCode": "1"
+          "postalZipCode": "M1P4Y7"
         }
       }
     },
     {
       "id": "5",
       "owner": "Brandon White",
-      "name": "Financial Planning",
+      "name": "Senior Financial Planning",
       "totalBudget": "2500",
       "theme": "Financial",
       "status": "In Progress",
@@ -198,9 +198,9 @@
     {
       "id": "6",
       "owner": "Brandon White",
-      "name": "Financial Planning",
+      "name": "Community Housing Issues",
       "totalBudget": "2500",
-      "theme": "Financial",
+      "theme": "Community",
       "status": "In Progress",
       "dateTime": "2015-05-23T18:00:00",
       "tasks": [
@@ -237,9 +237,9 @@
     {
       "id": "7",
       "owner": "Brandon White",
-      "name": "Financial Planning",
+      "name": "Healthy Living",
       "totalBudget": "2500",
-      "theme": "Financial",
+      "theme": "Health",
       "status": "In Progress",
       "dateTime": "2015-06-23T18:00:00",
       "tasks": [
