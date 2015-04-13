@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CARP Connects UI Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css" />
+    <link rel="stylesheet" href="css/login.css" media="screen" type="text/css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+    <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+</head>
+<script>
+
+    function validateUser(data) {
+
+        $.ajax({
+            type: "GET",
+            url: "json/user.json",
+            dataType: "json",
+            success: function() {
+
+                var user = data.user[1].email;
+                var pass = data.user[1].password;
+
+                if (user == document.getElementById("#email") & pass == document.getElementById("#pass")) {
+                    window.location.replace("http://mobile.sheridanc.on.ca/~beehooaa/CARP/index.html");
+                }
+                else {
+                    alert("Error bad login info");
+                }
+            },
+            error: function() {
+                alert("error loading json");
+            }
+        });
+
+    }
+
+
+</script>
+<body>
+    <nav>
+        <div align="center" class="nav-wrapper blue lighten-1">
+         
+                <a class="brand-logo center" href="#">CARP Connect</a>
+            
+        </div>
+    </nav>
+    
+<div id="login">
+  <form action="index.html;">
+    <input id="email" type="email" placeholder="Email" />
+    <input id="pass" type="password" placeholder="Password" />
+  <button id="submit" class="btn waves-effect waves-light" type="submit" name="action">Log in</button>
+  </form>
+</div>
+</body>
+</html>
