@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        <title>CARP Connects UI Template</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper blue lighten-1">
+                <div class="container">
+                    <a class="brand-logo center" href="index.html">CARP Connect</a>
+                    <a data-activates="side-nav" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                    <ul class="side-nav fixed" id="side-nav">
+                        <li class="logo">
+                            <a id="logo-container" href="index.html">
+                                <img id="front-page-logo" src="images/logo.png" class="responsive-img">
+                            </a>
+                        </li>
+                        <li class="clearfix"></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="account.html">Account Management</a></li>
+                        <li><a href="calendar.html">Calendar</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#" onclick="Materialize.toast('Will forward user to Google Drive.', 4000)">Document Workspace</a></li>
+                        <li><a href="pastevents.html">View Past Events</a></li>
+                        <li><a href="reports.html">View Reports</a></li>
+                        <li class="divider"></li>
+                        <li><a href="login.html">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="row">
+                <div class="col s12 m7 l8">
+                    <div class="section">
+                        <div class="row">
+                            <div class="col s12 center">
+                                <h2>Financial Planning for Retirees</h2>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:0;">
+                            <div class="col s10">
+                                <h4>Assigned Tasks</h4>
+                            </div>	
+                            <div class="col s2 right-align">
+                                <h4><a href="addtask.html" class="btn-floating tooltipped" data-position="bottom" data-delay="50" data-tooltip="Add Task"><i class="mdi-content-add"></i></a></h4>
+                            </div>
+                        </div>
+                        <div class="row divider"></div>
+                        <div class="row" style="margin-bottom:0;">
+                            <div class="col s12">
+                                <div class="card-panel green lighten-4">
+                                    <div class="row">
+                                        <a class="hyperlink-no-style" href="worktask.html">
+                                            <div class="col s7">
+                                                <h5>Hire a Caterer</h5>
+                                                <span class="row">A caterer is required for this event, snacks and sandwiches.</span>
+                                            </div>
+                                            <div class="col s4">
+                                                <ul class="right-align">
+                                                    <li><b>Budget: </b>$350</li>
+                                                    <li><b>Used: </b>$250</li>
+                                                    <li><b>Due: </b>March 9, 2015</li>
+                                                    <li><b>Status: </b>Complete</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                        <div class="col s1 right-align" style="padding-left:0.75rem;padding-right:0;">
+                                            <a class="btn-flat tooltipped" data-position="bottom" style="padding:0;margin:0;" data-delay="50" data-tooltip="Delete Task"><i class="mdi-content-clear"></i></a></br>
+                                            <a  href="worktask.html" class="btn-flat tooltipped" style="padding:0;margin:0;" data-position="bottom" data-delay="50" data-tooltip="Edit Task"><i class="mdi-editor-mode-edit"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:0;">
+                            <div class="col s12">
+                                <div class="card-panel orange lighten-4">
+                                    <div class="row">
+                                        <a class="hyperlink-no-style" href="worktask.html">
+                                            <div class="col s7">
+                                                <h5>Book Venue for Event</h5>
+                                                <span class="row">Approximately 100 guests are attending, please book a hall to accommodate this in the Oakville area.</span>
+                                            </div>
+                                            <div class="col s4">
+                                                <ul class="right-align">
+                                                    <li><b>Budget: </b>$1000</li>
+                                                    <li><b>Used: </b>$650</li>
+                                                    <li><b>Due: </b>April 20, 2015</li>
+                                                    <li><b>Status: </b>In Progress</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                        <div class="col s1 right-align" style="padding-left:0.75rem;padding-right:0;">
+                                            <a class="btn-flat tooltipped" data-position="bottom" style="padding:0;margin:0;" data-delay="50" data-tooltip="Delete Task"><i class="mdi-content-clear"></i></a></br>
+                                            <a  href="worktask.html" class="btn-flat tooltipped" style="padding:0;margin:0;" data-position="bottom" data-delay="50" data-tooltip="Edit Task"><i class="mdi-editor-mode-edit"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom:0;">
+                            <div class="col s12">
+                                <div class="card-panel red lighten-4">
+                                    <div class="row">
+                                        <a class="hyperlink-no-style" href="worktask.html">
+                                            <div class="col s7">
+                                                <h5>Hire a Guest Speaker</h5>
+                                                <span class="row">A Subject Matter Expert (SME) is required in the field of financial planning.</span>
+                                            </div>
+                                            <div class="col s4">
+                                                <ul class="right-align">
+                                                    <li><b>Budget: </b>$200</li>
+                                                    <li><b>Used: </b>$200</li>
+                                                    <li><b>Due: </b>April 25, 2015</li>
+                                                    <li><b>Status: </b>Not Started</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                        <div class="col s1 right-align" style="padding-left:0.75rem;padding-right:0;">
+                                            <a class="btn-flat tooltipped" data-position="bottom" style="padding:0;margin:0;" data-delay="50" data-tooltip="Delete Task"><i class="mdi-content-clear"></i></a></br>
+                                            <a  href="worktask.html" class="btn-flat tooltipped" style="padding:0;margin:0;" data-position="bottom" data-delay="50" data-tooltip="Edit Task"><i class="mdi-editor-mode-edit"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m5 l4">
+                    <h5 class="header">Calendar</h5>
+                    <div id="calendar">
+
+                    </div>
+                    <div class="row">
+                        <div class="col s12 center">
+                            <div class="card-panel green">
+                                <span class="white-text">Budget Status
+                                    </br>$1100/$1550
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js"></script>
+        <script>
+			(function(yourcode) {
+				// The global jQuery object is passed as a parameter
+				yourcode(window.jQuery, window, document);
+			}(function($, window, document) {
+				// The $ is now locally scoped
+				// Listen for the jQuery ready event on the document
+				$(function() {
+					$(".button-collapse").sideNav();
+					$("#calendar").fullCalendar({
+						contentHeight: 300
+					});
+					$('.datepicker').pickadate({
+						selectMonths: true, // Creates a dropdown to control month
+						selectYears: 15, // Creates a dropdown of 15 years to control year
+						min: new Date() // Disable past dates
+					});
+					$('select').material_select();
+					$('.tooltipped').tooltip({delay: 50});
+					
+					//TODO: Ben also need to finish.
+                    getTasks().done(function(json) {
+						$('#contentFiles').html(getHTML(json));
+					});
+				}); // end of document ready
+
+				
+				function getTasks() {
+					return $.ajax({
+						url: "json/task.json",
+						type: "GET",
+						dataType: "json"
+					})
+					.always(function() {
+					})
+					.fail(function() {
+						alert("A critical error has occurred while retrieving the files!");
+					});
+				}
+				//TODO: Ben need to finish.
+				function getHTML(json) {
+					var filenameHTML = "";
+					$.each(json, function(i, filename) {
+						var fileExt = filename.substr((filename.lastIndexOf('.') +1));
+						filenameHTML += "<div class='col s12 m6 l4'><div class='card blue-grey'><div class='card-content white-text'>";
+						/*if("mp4" === fileExt){
+							filenameHTML += "<span class='valign-wrapper'><video width='200px' src='files/" + filename + "'></video></span><br><span class='valign-wrapper'>" + filename + "</span>";
+						}
+						else {*/
+							filenameHTML += "<span class='valign-wrapper'><p>" + filename + "</p></span>";
+						//}
+						filenameHTML += "</div><div class='card-action'><span class='valign-wrapper'><a href='files/" + filename + "' download>Download</a>";
+						if("mp4" === fileExt){
+							filenameHTML += "<a href='files/" + filename + "'>Play</a>";
+						}
+						filenameHTML += "</span></div></div></div>";
+					});
+					return filenameHTML;
+				}
+			}));
+        </script>
+    </body>
+</html>
