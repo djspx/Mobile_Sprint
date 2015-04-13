@@ -35,7 +35,7 @@
           "city": "Toronto",
           "provinceState": "Ontario",
           "country": "Canada",
-          "postalZipCode": "M2J4R1"
+          "postalZipCode": "M2J 4R1"
         }
       }
     },
@@ -74,7 +74,7 @@
           "city": "Scarborough",
           "provinceState": "Ontario",
           "country": "Canada",
-          "postalZipCode": "M1H2Z1"
+          "postalZipCode": "M1H 2Z1"
         }
       }
     },
@@ -152,7 +152,7 @@
           "city": "Scarborough",
           "provinceState": "Ontario",
           "country": "Canada",
-          "postalZipCode": "M1P4Y7"
+          "postalZipCode": "M1P 4Y7"
         }
       }
     },
@@ -179,7 +179,7 @@
       ],
       "venue": {
         "venueId": "1",
-        "name": "Woodbine Business Center",
+        "name": "Woodbine Business Centre",
         "description": "Nice venue in Markham",
         "parkingAvailability": "true",
         "publicTransportationAccess": "true",
@@ -191,7 +191,7 @@
           "city": "Markham",
           "provinceState": "Ontario",
           "country": "Canada",
-          "postalZipCode": "M6M3K9"
+          "postalZipCode": "L3R 4B9"
         }
       }
     },
@@ -230,7 +230,7 @@
           "city": "Scarborough",
           "provinceState": "Ontario",
           "country": "Canada",
-          "postalZipCode": "M6M3K9"
+          "postalZipCode": "M1H 3E3"
         }
       }
     },
@@ -269,7 +269,7 @@
           "city": "Scarborough",
           "provinceState": "Ontario",
           "country": "Canada",
-          "postalZipCode": "M6M3K9"
+          "postalZipCode": "M1B 3C6"
         }
       }
     }

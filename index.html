@@ -91,7 +91,13 @@
 
                 string += '<div class="card">' +
                 '<div class="card-image">' +
-                '<iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=' + encodeURIComponent(row.venue.name.trim()) + encodeURIComponent(row.venue.name.trim()) + encodeURIComponent(row.venue.address.city.trim()) + ',' + encodeURIComponent(row.venue.address.country.trim()) + '&key=AIzaSyDez5ZF6K_UOr8izzd4PkXyWpAzG1dwTJQ"></iframe>' +
+                '<iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=' +
+                encodeURIComponent(row.venue.name.trim()) +
+                encodeURIComponent(row.venue.address.city.trim()) + ',' +
+                encodeURIComponent(row.venue.address.provinceState.trim()) + ',' +
+                encodeURIComponent(row.venue.address.postalZipCode.trim()) + ',' +
+                encodeURIComponent(row.venue.address.country.trim()) +
+                '&key=AIzaSyDez5ZF6K_UOr8izzd4PkXyWpAzG1dwTJQ"></iframe>' +
                 '<span class="card-title right-align"></span>' +
                 '</div>' +
                 '<div class="card-content">' +
