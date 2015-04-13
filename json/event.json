@@ -21,27 +21,23 @@
           "status": "Incomplete"
         }
       ],
-      "venue": [
-        {
-          "venueId": "1",
-          "name": "Woodbine Business Center",
-          "description": "Hire a caterer for 50-75 people",
-          "parkingAvailability": "true",
-          "publicTransportationAccess": "true",
-          "address": [
-            {
-              "addressId": "1",
-              "line1": "7270 Woodbine Ave.",
-              "line2": "",
-              "line3": "",
-              "city": "Markham",
-              "provinceState": "Ontario",
-              "country": "Canada",
-              "postalZipCode": "1"
-            }
-          ]
+      "venue": {
+        "venueId": "1",
+        "name": "Woodbine Business Center",
+        "description": "Hire a caterer for 50-75 people",
+        "parkingAvailability": "true",
+        "publicTransportationAccess": "true",
+        "address": {
+          "addressId": "1",
+          "line1": "7270 Woodbine Ave.",
+          "line2": "",
+          "line3": "",
+          "city": "Markham",
+          "provinceState": "Ontario",
+          "country": "Canada",
+          "postalZipCode": "1"
         }
-      ]
+      }
     },
     {
       "id": "2",
@@ -64,27 +60,23 @@
           "status": "Incomplete"
         }
       ],
-      "venue": [
-        {
-          "venueId": "1",
-          "name": "Woodbine Business Center",
-          "description": "Hire a caterer for 50-75 people",
-          "parkingAvailability": "true",
-          "publicTransportationAccess": "true",
-          "address": [
-            {
-              "addressId": "1",
-              "line1": "7270 Woodbine Ave.",
-              "line2": "",
-              "line3": "",
-              "city": "Markham",
-              "provinceState": "Ontario",
-              "country": "Canada",
-              "postalZipCode": "1"
-            }
-          ]
+      "venue": {
+        "venueId": "1",
+        "name": "Woodbine Business Center",
+        "description": "Hire a caterer for 50-75 people",
+        "parkingAvailability": "true",
+        "publicTransportationAccess": "true",
+        "address": {
+          "addressId": "1",
+          "line1": "7270 Woodbine Ave.",
+          "line2": "",
+          "line3": "",
+          "city": "Markham",
+          "provinceState": "Ontario",
+          "country": "Canada",
+          "postalZipCode": "1"
         }
-      ]
+      }
     },
     {
       "id": "3",
@@ -107,27 +99,23 @@
           "status": "Incomplete"
         }
       ],
-      "venue": [
-        {
-          "venueId": "1",
-          "name": "Woodbine Business Center",
-          "description": "Hire a caterer for 50-75 people",
-          "parkingAvailability": "true",
-          "publicTransportationAccess": "true",
-          "address": [
-            {
-              "addressId": "1",
-              "line1": "7270 Woodbine Ave.",
-              "line2": "",
-              "line3": "",
-              "city": "Markham",
-              "provinceState": "Ontario",
-              "country": "Canada",
-              "postalZipCode": "1"
-            }
-          ]
+      "venue": {
+        "venueId": "1",
+        "name": "Woodbine Business Center",
+        "description": "Hire a caterer for 50-75 people",
+        "parkingAvailability": "true",
+        "publicTransportationAccess": "true",
+        "address": {
+          "addressId": "1",
+          "line1": "7270 Woodbine Ave.",
+          "line2": "",
+          "line3": "",
+          "city": "Markham",
+          "provinceState": "Ontario",
+          "country": "Canada",
+          "postalZipCode": "1"
         }
-      ]
+      }
     },
     {
       "id": "4",
@@ -150,27 +138,23 @@
           "status": "Incomplete"
         }
       ],
-      "venue": [
-        {
-          "venueId": "1",
-          "name": "Woodbine Business Center",
-          "description": "Hire a caterer for 50-75 people",
-          "parkingAvailability": "true",
-          "publicTransportationAccess": "true",
-          "address": [
-            {
-              "addressId": "1",
-              "line1": "7270 Woodbine Ave.",
-              "line2": "",
-              "line3": "",
-              "city": "Markham",
-              "provinceState": "Ontario",
-              "country": "Canada",
-              "postalZipCode": "1"
-            }
-          ]
+      "venue": {
+        "venueId": "1",
+        "name": "Woodbine Business Center",
+        "description": "Hire a caterer for 50-75 people",
+        "parkingAvailability": "true",
+        "publicTransportationAccess": "true",
+        "address": {
+          "addressId": "1",
+          "line1": "7270 Woodbine Ave.",
+          "line2": "",
+          "line3": "",
+          "city": "Markham",
+          "provinceState": "Ontario",
+          "country": "Canada",
+          "postalZipCode": "1"
         }
-      ]
+      }
     },
     {
       "id": "5",
@@ -193,27 +177,23 @@
           "status": "Incomplete"
         }
       ],
-      "venue": [
-        {
-          "venueId": "1",
-          "name": "Woodbine Business Center",
-          "description": "Nice venue in Markham",
-          "parkingAvailability": "true",
-          "publicTransportationAccess": "true",
-          "address": [
-            {
-              "addressId": "1",
-              "line1": "7270 Woodbine Ave.",
-              "line2": "",
-              "line3": "",
-              "city": "Markham",
-              "provinceState": "Ontario",
-              "country": "Canada",
-              "postalZipCode": "M6M3K9"
-            }
-          ]
+      "venue": {
+        "venueId": "1",
+        "name": "Woodbine Business Center",
+        "description": "Nice venue in Markham",
+        "parkingAvailability": "true",
+        "publicTransportationAccess": "true",
+        "address": {
+          "addressId": "1",
+          "line1": "7270 Woodbine Ave.",
+          "line2": "",
+          "line3": "",
+          "city": "Markham",
+          "provinceState": "Ontario",
+          "country": "Canada",
+          "postalZipCode": "M6M3K9"
         }
-      ]
+      }
     },
     {
       "id": "6",
@@ -236,27 +216,23 @@
           "status": "Incomplete"
         }
       ],
-      "venue": [
-        {
-          "venueId": "2",
-          "name": "Intelligent Office",
-          "description": "Close venue in Scarborough",
-          "parkingAvailability": "true",
-          "publicTransportationAccess": "true",
-          "address": [
-            {
-              "addressId": "2",
-              "line1": "100 Consilium Pl..",
-              "line2": "Suite 200",
-              "line3": "",
-              "city": "Scarborough",
-              "provinceState": "Ontario",
-              "country": "Canada",
-              "postalZipCode": "M6M3K9"
-            }
-          ]
+      "venue": {
+        "venueId": "2",
+        "name": "Intelligent Office",
+        "description": "Close venue in Scarborough",
+        "parkingAvailability": "true",
+        "publicTransportationAccess": "true",
+        "address": {
+          "addressId": "2",
+          "line1": "100 Consilium Pl..",
+          "line2": "Suite 200",
+          "line3": "",
+          "city": "Scarborough",
+          "provinceState": "Ontario",
+          "country": "Canada",
+          "postalZipCode": "M6M3K9"
         }
-      ]
+      }
     },
     {
       "id": "7",
@@ -279,27 +255,23 @@
           "status": "Incomplete"
         }
       ],
-      "venue": [
-        {
-          "venueId": "3",
-          "name": "Regus Scarborough",
-          "description": "Has a large conference room.",
-          "parkingAvailability": "true",
-          "publicTransportationAccess": "true",
-          "address": [
-            {
-              "addressId": "3",
-              "line1": "10 Milner Business Ct.",
-              "line2": "",
-              "line3": "",
-              "city": "Scarborough",
-              "provinceState": "Ontario",
-              "country": "Canada",
-              "postalZipCode": "M6M3K9"
-            }
-          ]
+      "venue": {
+        "venueId": "3",
+        "name": "Regus Scarborough",
+        "description": "Has a large conference room.",
+        "parkingAvailability": "true",
+        "publicTransportationAccess": "true",
+        "address": {
+          "addressId": "3",
+          "line1": "10 Milner Business Ct.",
+          "line2": "",
+          "line3": "",
+          "city": "Scarborough",
+          "provinceState": "Ontario",
+          "country": "Canada",
+          "postalZipCode": "M6M3K9"
         }
-      ]
+      }
     }
   ]
 }
