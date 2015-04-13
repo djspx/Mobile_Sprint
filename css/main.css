@@ -73,6 +73,9 @@ ul.side-nav.fixed li.logo:hover {
     pointer-events: none; 
 }
 
+.no-margin-bot {
+    margin-bottom: 0;
+}
 
 .bold {
     font-weight: bold;
