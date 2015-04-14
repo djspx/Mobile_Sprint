@@ -286,7 +286,7 @@
         var task = {};
         task.name = $("#task_name").val();
         task.assignedTo = $("#assignedTo option:selected").text();
-        task.budget = $("#task_budget").val();
+        task.budget = parseInt($("#task_budget").val(), 10);
         task.duedate = $("#due_date").val();
 
         string = "";
@@ -299,9 +299,9 @@
 
         $("#tasktable tbody").append(string);
 
-        var budget = $("#budget_running").text();
+        var budget = parseInt($("#budget_running").text(), 10);
         budget += task.budget;
-        $("#budget_running").html(parseInt(budget, 10));
+        $("#budget_running").html(budget);
 
         $('#modal1').closeModal();
         return false;
