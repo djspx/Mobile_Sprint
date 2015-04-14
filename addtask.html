@@ -1,197 +1,208 @@
 <!DOCTYPE html>
 <html>
-    <head lang="en">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-        <title>CARP Connects UI Template</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css" />
-        <link rel="stylesheet" href="css/main.css" />
-    </head>
-    <body>
-        <nav>
-            <div class="nav-wrapper blue lighten-1">
-                <div class="container">
-                    <a class="brand-logo center" href="index.html">CARP Connect</a>
-                    <a data-activates="side-nav" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-                    <ul class="side-nav fixed" id="side-nav">
-                        <li class="logo">
-                            <a id="logo-container" href="index.html">
-                                <img id="front-page-logo" src="images/logo.png" class="responsive-img">
-                            </a>
-                        </li>
-                        <li class="clearfix"></li>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="account.html">Account Management</a></li>
-                        <li><a href="calendar.html">Calendar</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#" onclick="Materialize.toast('Will forward user to Google Drive.', 4000)">Document Workspace</a></li>
-                        <li><a href="pastevents.html">View Past Events</a></li>
-                        <li><a href="reports.html">View Reports</a></li>
-                        <li class="divider"></li>
-                        <li><a href="login.html">Log Out</a></li>
-                    </ul>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>CARP Connects UI Template</title>
+    <link rel="stylesheet" href="css/materialize.min.css"/>
+    <link rel="stylesheet" href="css/fullcalendar.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/fullcalendar.min.js"></script>
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper blue lighten-1">
+        <div class="container">
+            <a class="brand-logo center" href="index.html">CARP Connect</a>
+            <a data-activates="side-nav" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            <ul class="side-nav fixed" id="side-nav">
+                <li class="logo">
+                    <a id="logo-container" href="index.html">
+                        <img id="front-page-logo" src="images/logo.png" class="responsive-img">
+                    </a>
+                </li>
+                <li class="clearfix"></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="account.html">Account Management</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li class="divider"></li>
+                <li><a href="#" onclick="Materialize.toast('Will forward user to Google Drive.', 4000)">Document
+                    Workspace</a></li>
+                <li><a href="pastevents.html">View Past Events</a></li>
+                <li><a href="reports.html">View Reports</a></li>
+                <li class="divider"></li>
+                <li><a href="login.html">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main>
+    <div class="row">
+        <div class="col s12 m7 l8">
+            <div class="section">
+                <div class="row">
+                    <div class="col s12 center">
+                        <h2>Create Task</h2>
+                    </div>
                 </div>
-            </div>
-        </nav>
-        <main>
-            <div class="row">
-                <div class="col s12 m7 l8">
-                    <div class="section">
+                <div class="row">
+                    <form class="col s12">
                         <div class="row">
-                            <div class="col s12 center">
-                                <h2>Create Task</h2>
+                            <div class="input-field col s12">
+                                <input id="task_name" type="text" class="validate" length="45" maxlength="45">
+                                <label for="task_name">Task Name</label>
                             </div>
                         </div>
                         <div class="row">
-                            <form class="col s12">
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="task_name" type="text" class="validate" length="45" maxlength="45">
-                                        <label for="task_name">Task Name</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s6 m3">
-                                        <input type="date" id="due_date" class="datepicker">
-                                        <label for="due_date">Due Date</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <textarea id="description" class="materialize-textarea"length="255" maxlength="255"></textarea>
-                                        <label for="description">Description<i class="mdi-editor-mode-edit right"></i></label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12 m6">
-                                        <select>
-                                            <option value="0" selected>Vendor</option>
-                                            <option value="1">Custom</option>
-                                        </select>
-                                        <label>Task Type</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s8">
-                                        <select>
-                                            <option value="" disabled selected>Please choose a vendor</option>
-                                            <option value="1">Harry's Food Service</option>
-                                            <option value="2">Express Delivery Service</option>
-                                        </select>
-                                        <label>Vendor Name</label>
-                                    </div>
-                                    <div class="input-field col s4">
-                                        <a href="addvendor.html" class="btn-floating tooltipped" data-position="bottom" data-delay="50" data-tooltip="Add Vendor"><i class="mdi-content-add"></i></a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="range-field col s12">
-                                        <label for="task_budget">Task Budget ($)</label>
-                                        <input type="range" id="task_budget" value ="0" min="0" max="750" />
-                                    </div>
-                                </div>
-                                <div class="row" style="margin-bottom: 0;">
-                                    <div class="input-field col s8">
-                                        <select>
-                                            <option value="" disabled selected>Select Volunteer</option>
-                                            <option value="1">Aaron Beehoo</option>
-                                            <option value="2">Kevin Lee</option>
-                                            <option value="3">Sergio Parracho</option>
-                                            <option value="4">Benjamin Krissilas</option>
-                                        </select>
-                                        <label>Assign to</label>
-                                    </div>
-                                    <div class="input-field col s4">
-                                        <a class="btn-floating tooltipped" data-position="bottom" data-delay="50" data-tooltip="Add Volunteer"><i class="mdi-content-add"></i></a>
-                                        <a class="btn-floating tooltipped" data-position="bottom" data-delay="50" data-tooltip="Clear All"><i class="mdi-content-clear"></i></a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s8">
-                                        <select>
-                                            <option value="" disabled selected>Select Volunteer</option>
-                                            <option value="1">Aaron Beehoo</option>
-                                            <option value="2">Kevin Lee</option>
-                                            <option value="3">Sergio Parracho</option>
-                                            <option value="4">Benjamin Krissilas</option>
-                                        </select>
-                                    </div>
-                                    <div class="input-field col s4">
-                                        <a class="btn-floating tooltipped" data-position="bottom" data-delay="50" data-tooltip="Remove Volunteer"><i class="mdi-content-remove"></i></a>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col s12 center">
-                                        <a href="#" id="submit" class="waves-effect waves-light btn"><i class="mdi-content-send right"></i>Add Task</a>
-                                        <!--
-                                        <button class="btn waves-effect waves-light" type="submit" name="action">Add Task
-                                        <i class="mdi-content-send right"></i>
-                                        </button>
-                                        -->
-                                        <a href="#" id="cancel" class="waves-effect waves-light btn"><i class="mdi-navigation-cancel right"></i>Cancel</a>
-                                    </div>
-                                </div>
-                            </form>
+                            <div class="input-field col s6 m3">
+                                <input type="date" id="due_date" class="datepicker">
+                                <label for="due_date">Due Date</label>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col s12 m5 l4">
-                    <h5 class="header">Calendar</h5>
-                    <div id="calendar">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="description" class="materialize-textarea" length="255"
+                                          maxlength="255"></textarea>
+                                <label for="description">Description<i class="mdi-editor-mode-edit right"></i></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <select>
+                                    <option value="0" selected>Vendor</option>
+                                    <option value="1">Custom</option>
+                                </select>
+                                <label>Task Type</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s8">
+                                <select>
+                                    <option value="" disabled selected>Please choose a vendor</option>
+                                    <option value="1">Harry's Food Service</option>
+                                    <option value="2">Express Delivery Service</option>
+                                </select>
+                                <label>Vendor Name</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <a href="addvendor.html" class="btn-floating tooltipped" data-position="bottom"
+                                   data-delay="50" data-tooltip="Add Vendor"><i class="mdi-content-add"></i></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="range-field col s12">
+                                <label for="task_budget">Task Budget ($)</label>
+                                <input type="range" id="task_budget" value="0" min="0" max="750"/>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom: 0;">
+                            <div class="input-field col s8">
+                                <select>
+                                    <option value="" disabled selected>Select Volunteer</option>
+                                    <option value="1">Aaron Beehoo</option>
+                                    <option value="2">Kevin Lee</option>
+                                    <option value="3">Sergio Parracho</option>
+                                    <option value="4">Benjamin Krissilas</option>
+                                </select>
+                                <label>Assign to</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <a class="btn-floating tooltipped" data-position="bottom" data-delay="50"
+                                   data-tooltip="Add Volunteer"><i class="mdi-content-add"></i></a>
+                                <a class="btn-floating tooltipped" data-position="bottom" data-delay="50"
+                                   data-tooltip="Clear All"><i class="mdi-content-clear"></i></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s8">
+                                <select>
+                                    <option value="" disabled selected>Select Volunteer</option>
+                                    <option value="1">Aaron Beehoo</option>
+                                    <option value="2">Kevin Lee</option>
+                                    <option value="3">Sergio Parracho</option>
+                                    <option value="4">Benjamin Krissilas</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s4">
+                                <a class="btn-floating tooltipped" data-position="bottom" data-delay="50"
+                                   data-tooltip="Remove Volunteer"><i class="mdi-content-remove"></i></a>
+                            </div>
+                        </div>
 
-                    </div>
-                    <ul class="collection with-header">
-                        <li class="collection-header"><h4>Tasks</h4></li>
-                        <li class="collection-item">Book a Caterer</li>
-                        <li class="collection-item">Bring Refreshments</li>
-                    </ul>
-                    <div class="row">
-                        <div class="col s12 center">
-                            <div class="card-panel green">
+                        <div class="row">
+                            <div class="col s12 center">
+                                <a href="#" id="submit" class="waves-effect waves-light btn"><i
+                                        class="mdi-content-send right"></i>Add Task</a>
+                                <!--
+                                <button class="btn waves-effect waves-light" type="submit" name="action">Add Task
+                                <i class="mdi-content-send right"></i>
+                                </button>
+                                -->
+                                <a href="#" id="cancel" class="waves-effect waves-light btn"><i
+                                        class="mdi-navigation-cancel right"></i>Cancel</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m5 l4">
+            <h5 class="header">Calendar</h5>
+
+            <div id="calendar">
+
+            </div>
+            <ul class="collection with-header">
+                <li class="collection-header"><h4>Tasks</h4></li>
+                <li class="collection-item">Book a Caterer</li>
+                <li class="collection-item">Bring Refreshments</li>
+            </ul>
+            <div class="row">
+                <div class="col s12 center">
+                    <div class="card-panel green">
                                 <span class="white-text">Budget Status
                                     </br>$1250/$2000
                                 </span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-        </main>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $(".button-collapse").sideNav();
-                $("#calendar").fullCalendar({
-                    contentHeight: 300
-                });
-                $('.datepicker').pickadate({
-                    selectMonths: true, // Creates a dropdown to control month
-                    selectYears: 15, // Creates a dropdown of 15 years to control year
-                    min: new Date() // Disable past dates
-                });
-                $('select').material_select();
-                $('.tooltipped').tooltip({delay: 50});
-                $("#submit").attr("href", "workevent.html?eventId="+queryString["eventId"]);
-                $("#cancel").attr("href", "workevent.html?eventId="+queryString["eventId"]);
-            });
+        </div>
+    </div>
+</main>
 
-            //Ben: Added to make submit and cancel buttons dynamic
-            var queryString = [], hash;
-            var q = document.URL.split('?')[1];
-            if (q != undefined) {
-                q = q.split('&');
-                for (var i = 0; i < q.length; i++) {
-                    hash = q[i].split('=');
-                    queryString.push(hash[1]);
-                    queryString[hash[0]] = hash[1];
-                }
-            }
+<script>
+    $(document).ready(function () {
+        $(".button-collapse").sideNav();
+        $("#calendar").fullCalendar({
+            contentHeight: 300
+        });
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15, // Creates a dropdown of 15 years to control year
+            min: new Date() // Disable past dates
+        });
+        $('select').material_select();
+        $('.tooltipped').tooltip({delay: 50});
+        $("#submit").attr("href", "workevent.html?eventId=" + queryString["eventId"]);
+        $("#cancel").attr("href", "workevent.html?eventId=" + queryString["eventId"]);
+    });
 
-        </script>
-    </body>
+    //Ben: Added to make submit and cancel buttons dynamic
+    var queryString = [], hash;
+    var q = document.URL.split('?')[1];
+    if (q != undefined) {
+        q = q.split('&');
+        for (var i = 0; i < q.length; i++) {
+            hash = q[i].split('=');
+            queryString.push(hash[1]);
+            queryString[hash[0]] = hash[1];
+        }
+    }
+
+</script>
+</body>
 </html>

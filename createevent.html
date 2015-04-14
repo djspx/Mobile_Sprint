@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <title>CARP Connects UI Template</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css"/>
+    <link rel="stylesheet" href="css/materialize.min.css"/>
+    <link rel="stylesheet" href="css/fullcalendar.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
+
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/fullcalendar.min.js"></script>
 </head>
 <body>
 <nav>
@@ -237,10 +242,6 @@
         </div>
     </div>
 </main>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js"></script>
 <script>
     $(document).ready(function () {
         $(".button-collapse").sideNav();
@@ -272,12 +273,12 @@
         $("#task_name").val('');
         $("#due_date").val('');
         $("#task_description").val('');
-        $("#task_type").val( $('#task_type').prop('defaultSelected') );
-        $("#vendor_name").val( $('#vendor_name').prop('defaultSelected') );
+        $("#task_type").val($('#task_type').prop('defaultSelected'));
+        $("#vendor_name").val($('#vendor_name').prop('defaultSelected'));
         //$("#task_type").val([]);
         //$("#vendor_name").val([]);
         $("#task_budget").val(0);
-        $("#assignedTo").val( $('#assignedTo').prop('defaultSelected') );
+        $("#assignedTo").val($('#assignedTo').prop('defaultSelected'));
         //$("#assignedTo").val('');
         $('select').material_select();
     });

@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <title>CARP Connects UI Template</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css"/>
+    <link rel="stylesheet" href="css/materialize.min.css"/>
+    <link rel="stylesheet" href="css/fullcalendar.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
+
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/fullcalendar.min.js"></script>
 </head>
 <body>
 <nav>
@@ -71,10 +76,6 @@
         </div>
     </div>
 </main>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js"></script>
 <script>
     (function (yourcode) {
         // The global jQuery object is passed as a parameter
@@ -108,17 +109,17 @@
                 type: "GET",
                 dataType: "json"
             })
-            .always(function () {
-            })
-            .fail(function () {
-                var events = JSON.parse(localStorage.getItem("events"));
-                if (events != null) {
-                    populate(events);
-                }
-                else {
-                    errorAlert();
-                }
-            });
+                    .always(function () {
+                    })
+                    .fail(function () {
+                        var events = JSON.parse(localStorage.getItem("events"));
+                        if (events != null) {
+                            populate(events);
+                        }
+                        else {
+                            errorAlert();
+                        }
+                    });
         }
 
         function errorAlert() {
@@ -153,7 +154,7 @@
                 return false;
             }
             $("#event-title").html(event.name);
-            $("#addtask").attr("href", "addtask.html?eventId="+eventId);
+            $("#addtask").attr("href", "addtask.html?eventId=" + eventId);
 
             var content = "";
             var usedBudget = 0;
@@ -161,44 +162,44 @@
                 usedBudget += parseFloat(task.budget);
                 content = content +
                 "<div class='row no-margin-bot'>" +
-                    "<div class='col s12'>" +
-                        "<div class='card-panel ";
-                            switch (task.status) {
-                                case "Complete":
-                                    content += "green";
-                                    break;
-                                case "In Progress":
-                                    content += "orange";
-                                    break;
-                                case "Not Started":
-                                    content += "red";
-                                    break;
-                                default:
-                                    content += "grey";
-                            }
+                "<div class='col s12'>" +
+                "<div class='card-panel ";
+                switch (task.status) {
+                    case "Complete":
+                        content += "green";
+                        break;
+                    case "In Progress":
+                        content += "orange";
+                        break;
+                    case "Not Started":
+                        content += "red";
+                        break;
+                    default:
+                        content += "grey";
+                }
                 content = content +
-                        " lighten-4'>" +
-                            "<div class='row'>" +
-                                "<a class='hyperlink-no-style' href='worktask.html?eventId="+eventId+"&taskId="+task.taskId+"'>" +
-                                    "<div class='col s7'>" +
-                                        "<h5>" + task.name + "</h5>" +
-                                        "<span class='row'>" + task.description + "</span>" +
-                                    "</div>" +
-                                    "<div class='col s4'>" +
-                                        "<ul class='right-align'>" +
-                                            "<li><b>Budget: </b>" + task.budget + "</li>" +
-                                            "<li><b>Due: </b>" + new Date((task.dateTime).replace(/-/g, '/').replace(/T/g, ' ')).toDateString() + "</li>" +
-                                            "<li><b>Status: </b>" + task.status + "</li>" +
-                                        "</ul>" +
-                                    "</div>" +
-                                "</a>" +
-                                "<div class='col s1 right-align' style='padding-left:0.75rem;padding-right:0;'>" +
-                                    "<a class='btn-flat tooltipped' data-position='bottom' style='padding:0;margin:0;' data-delay='50' data-tooltip='Delete Task'><i class='mdi-content-clear'></i></a></br>" +
-                                    "<a href='worktask.html?eventId="+eventId+"&taskId="+task.taskId+"' class='btn-flat tooltipped' style='padding:0;margin:0;' data-position='bottom' data-delay='50' data-tooltip='Edit Task'><i class='mdi-editor-mode-edit'></i></a>" +
-                                "</div>" +
-                            "</div>" +
-                        "</div>" +
-                    "</div>" +
+                " lighten-4'>" +
+                "<div class='row'>" +
+                "<a class='hyperlink-no-style' href='worktask.html?eventId=" + eventId + "&taskId=" + task.taskId + "'>" +
+                "<div class='col s7'>" +
+                "<h5>" + task.name + "</h5>" +
+                "<span class='row'>" + task.description + "</span>" +
+                "</div>" +
+                "<div class='col s4'>" +
+                "<ul class='right-align'>" +
+                "<li><b>Budget: </b>" + task.budget + "</li>" +
+                "<li><b>Due: </b>" + new Date((task.dateTime).replace(/-/g, '/').replace(/T/g, ' ')).toDateString() + "</li>" +
+                "<li><b>Status: </b>" + task.status + "</li>" +
+                "</ul>" +
+                "</div>" +
+                "</a>" +
+                "<div class='col s1 right-align' style='padding-left:0.75rem;padding-right:0;'>" +
+                "<a class='btn-flat tooltipped' data-position='bottom' style='padding:0;margin:0;' data-delay='50' data-tooltip='Delete Task'><i class='mdi-content-clear'></i></a></br>" +
+                "<a href='worktask.html?eventId=" + eventId + "&taskId=" + task.taskId + "' class='btn-flat tooltipped' style='padding:0;margin:0;' data-position='bottom' data-delay='50' data-tooltip='Edit Task'><i class='mdi-editor-mode-edit'></i></a>" +
+                "</div>" +
+                "</div>" +
+                "</div>" +
+                "</div>" +
                 "</div>";
             });
             $("#tasks-container").append(content);
