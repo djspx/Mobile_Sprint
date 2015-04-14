@@ -115,16 +115,16 @@
 
     function processUser(data) {
 
-        var name = data.user[1].firstName + " " + data.user[1].lastName;
+        var name = data.user[0].firstName + " " + data.user[0].lastName;
         $("#name").html("<input id='name' type='text' value='" + name  + "'>" +   "<label class='active' for='name'>Display Name</label>");
         $("#headerName").html(name + "'s Profile");
         
-                var bio = data.user[1].bio;
+                var bio = data.user[0].bio;
         $("#bio").html("<textarea id='biography' class='materialize-textarea' length='255' maxlength='255'>" + bio +"</textarea>" + "<label class='active' for='biography'>Biography<i class='mdi-editor-mode-edit right'></i></label>");
         
           
         
-        var skills = data.user[1].skills;
+        var skills = data.user[0].skills;
         $("#skills").html("<textarea id='skills' class='materialize-textarea' length='255' maxlength='255'>" + skills +"</textarea>" + "<label class='active' for='skills'>Skills<i class='active mdi-editor-mode-edit right'></i></label>");
              
         
