@@ -1,0 +1,306 @@
+{
+  "event": [
+    {
+      "id": "1",
+      "owner": "Brandon White",
+      "name": "Seniors and Healthy Living",
+      "totalBudget": "2500",
+      "theme": "Health",
+      "status": "Complete",
+      "dateTime": "2015-04-15T04:00:00",
+      "tasks": [
+        {
+          "taskId": "1",
+          "name": "Hire Caterer",
+          "description": "Hire a caterer for 50-75 people",
+          "notes": "In talks with caterer, waiting on an estimate",
+          "userIdAssignedTo": "1",
+          "dateTime": "2015-03-10T04:00:00",
+          "taskType": "Vendor",
+          "Vendor": "Bobs Food Service",
+          "budget": "350.00",
+          "status": "Complete"
+        },
+        {
+          "taskId": "2",
+          "name": "Book Venue for Event",
+          "description": "Approximately 100 guests are attending, please book a hall to accommodate this in the Oakville area.",
+          "userIdAssignedTo": "1",
+          "dateTime": "2015-04-20T04:00:00",
+          "taskType": "Vendor",
+          "Vendor": "Bobs Food Service",
+          "budget": "1000.00",
+          "status": "In Progress"
+        },
+        {
+          "taskId": "3",
+          "name": "Hire a Guest Speaker",
+          "description": "A Subject Matter Expert (SME) is required in the field of financial planning.",
+          "userIdAssignedTo": "1",
+          "dateTime": "2015-04-25T04:00:00",
+          "taskType": "Vendor",
+          "Vendor": "Bobs Food Service",
+          "budget": "200.00",
+          "status": "Not Started"
+        }
+      ],
+      "venue": {
+        "venueId": "7",
+        "name": "Radisson Hotel Toronto East",
+        "description": "Nice venue in Toronto",
+        "parkingAvailability": "true",
+        "publicTransportationAccess": "true",
+        "address": {
+          "addressId": "7",
+          "line1": "55 Hallcrown Place",
+          "line2": "",
+          "line3": "",
+          "city": "Toronto",
+          "provinceState": "Ontario",
+          "country": "Canada",
+          "postalZipCode": "M2J 4R1"
+        }
+      }
+    },
+    {
+      "id": "2",
+      "owner": "Brandon White",
+      "name": "Community Housing",
+      "totalBudget": "2500",
+      "theme": "Community",
+      "status": "Complete",
+      "dateTime": "2015-04-20T04:00:00",
+      "tasks": [
+        {
+          "taskId": "1",
+          "name": "Hire Caterer",
+          "description": "Hire a caterer for 50-75 people",
+          "notes": "In talks with caterer, waiting on an estimate",
+          "userIdAssignedTo": "1",
+          "dateTime": "2015-04-15T04:00:00",
+          "taskType": "Vendor",
+          "Vendor": "Bobs Food Service",
+          "budget": "350.00",
+          "status": "Incomplete"
+        }
+      ],
+      "venue": {
+        "venueId": "6",
+        "name": "Holiday Inn Toronto East",
+        "description": "Nice venue in Toronto",
+        "parkingAvailability": "true",
+        "publicTransportationAccess": "true",
+        "address": {
+          "addressId": "6",
+          "line1": "50 Estate Dr.",
+          "line2": "",
+          "line3": "",
+          "city": "Scarborough",
+          "provinceState": "Ontario",
+          "country": "Canada",
+          "postalZipCode": "M1H 2Z1"
+        }
+      }
+    },
+    {
+      "id": "3",
+      "owner": "Brandon White",
+      "name": "Annual Meeting",
+      "totalBudget": "2500",
+      "theme": "General",
+      "status": "Complete",
+      "dateTime": "2015-04-01T04:00:00",
+      "tasks": [
+        {
+          "taskId": "1",
+          "name": "Hire Caterer",
+          "description": "Hire a caterer for 50-75 people",
+          "notes": "In talks with caterer, waiting on an estimate",
+          "userIdAssignedTo": "1",
+          "dateTime": "2015-03-15T04:00:00",
+          "taskType": "Vendor",
+          "Vendor": "Bobs Food Service",
+          "budget": "350.00",
+          "status": "Incomplete"
+        }
+      ],
+      "venue": {
+        "venueId": "5",
+        "name": "Best Western Plus Executive Inn",
+        "description": "Nice venue in Toronto",
+        "parkingAvailability": "true",
+        "publicTransportationAccess": "true",
+        "address": {
+          "addressId": "5",
+          "line1": "38 Estate Dr.",
+          "line2": "",
+          "line3": "",
+          "city": "Toronto",
+          "provinceState": "Ontario",
+          "country": "Canada",
+          "postalZipCode": "M1H 2Z1"
+        }
+      }
+    },
+    {
+      "id": "4",
+      "owner": "Brandon White",
+      "name": "Senior Financial Planning",
+      "totalBudget": "2500",
+      "theme": "Financial",
+      "status": "Complete",
+      "dateTime": "2015-04-04T04:00:00",
+      "tasks": [
+        {
+          "taskId": "1",
+          "name": "Hire Caterer",
+          "description": "Hire a caterer for 50-75 people",
+          "notes": "In talks with caterer, waiting on an estimate",
+          "userIdAssignedTo": "1",
+          "dateTime": "2015-04-02T04:00:00",
+          "taskType": "Vendor",
+          "Vendor": "Bobs Food Service",
+          "budget": "350.00",
+          "status": "Incomplete"
+        }
+      ],
+      "venue": {
+        "venueId": "4",
+        "name": "Scarborough YMCA",
+        "description": "Nice venue in Scarborough",
+        "parkingAvailability": "true",
+        "publicTransportationAccess": "true",
+        "address": {
+          "addressId": "4",
+          "line1": "230 Town Centre Court.",
+          "line2": "",
+          "line3": "",
+          "city": "Scarborough",
+          "provinceState": "Ontario",
+          "country": "Canada",
+          "postalZipCode": "M1P 4Y7"
+        }
+      }
+    },
+    {
+      "id": "5",
+      "owner": "Brandon White",
+      "name": "Senior Financial Planning",
+      "totalBudget": "2500",
+      "theme": "Financial",
+      "status": "In Progress",
+      "dateTime": "2015-04-23T18:00:00",
+      "tasks": [
+        {
+          "taskId": "1",
+          "name": "Hire Caterer",
+          "description": "Hire a caterer for 50-75 people",
+          "notes": "In talks with caterer, waiting on an estimate",
+          "userIdAssignedTo": "1",
+          "dueDate": "2015-04-10T18:00:00",
+          "taskType": "Vendor",
+          "Vendor": "Bobs Food Service",
+          "budget": "350.00",
+          "status": "Incomplete"
+        }
+      ],
+      "venue": {
+        "venueId": "1",
+        "name": "Woodbine Business Centre",
+        "description": "Nice venue in Markham",
+        "parkingAvailability": "true",
+        "publicTransportationAccess": "true",
+        "address": {
+          "addressId": "1",
+          "line1": "7270 Woodbine Ave.",
+          "line2": "",
+          "line3": "",
+          "city": "Markham",
+          "provinceState": "Ontario",
+          "country": "Canada",
+          "postalZipCode": "L3R 4B9"
+        }
+      }
+    },
+    {
+      "id": "6",
+      "owner": "Brandon White",
+      "name": "Community Housing Issues",
+      "totalBudget": "2500",
+      "theme": "Community",
+      "status": "In Progress",
+      "dateTime": "2015-05-23T18:00:00",
+      "tasks": [
+        {
+          "taskId": "1",
+          "name": "Hire Caterer",
+          "description": "Hire a caterer for 50-75 people",
+          "notes": "In talks with caterer, waiting on an estimate",
+          "userIdAssignedTo": "1",
+          "dueDate": "2015-04-10T18:00:00",
+          "taskType": "Vendor",
+          "Vendor": "Bobs Food Service",
+          "budget": "350.00",
+          "status": "Incomplete"
+        }
+      ],
+      "venue": {
+        "venueId": "2",
+        "name": "Intelligent Office",
+        "description": "Close venue in Scarborough",
+        "parkingAvailability": "true",
+        "publicTransportationAccess": "true",
+        "address": {
+          "addressId": "2",
+          "line1": "100 Consilium Pl..",
+          "line2": "Suite 200",
+          "line3": "",
+          "city": "Scarborough",
+          "provinceState": "Ontario",
+          "country": "Canada",
+          "postalZipCode": "M1H 3E3"
+        }
+      }
+    },
+    {
+      "id": "7",
+      "owner": "Brandon White",
+      "name": "Healthy Living",
+      "totalBudget": "2500",
+      "theme": "Health",
+      "status": "In Progress",
+      "dateTime": "2015-06-23T18:00:00",
+      "tasks": [
+        {
+          "taskId": "1",
+          "name": "Hire Caterer",
+          "description": "Hire a caterer for 50-75 people",
+          "notes": "In talks with caterer, waiting on an estimate",
+          "userIdAssignedTo": "1",
+          "dueDate": "2015-04-10T18:00:00",
+          "taskType": "Vendor",
+          "Vendor": "Bobs Food Service",
+          "budget": "350.00",
+          "status": "Incomplete"
+        }
+      ],
+      "venue": {
+        "venueId": "3",
+        "name": "Regus Scarborough",
+        "description": "Has a large conference room.",
+        "parkingAvailability": "true",
+        "publicTransportationAccess": "true",
+        "address": {
+          "addressId": "3",
+          "line1": "10 Milner Business Ct.",
+          "line2": "",
+          "line3": "",
+          "city": "Scarborough",
+          "provinceState": "Ontario",
+          "country": "Canada",
+          "postalZipCode": "M1B 3C6"
+        }
+      }
+    }
+  ]
+}
