@@ -40,10 +40,10 @@
 
             <p>Select an event to show information for.</p>
 
-            <form id="eventform" action="pastevents-view.html" method="post">
+            <form id="eventform" action="pastevents-view.html" method="get">
                 <div class="row">
                     <div class="input-field col s8">
-                        <select id="event">
+                        <select id="event" name="eventId">
 
                         </select>
                         <label>Events</label>
@@ -94,7 +94,9 @@
     ];
 
     function process(result) {
+
         event = result.event;
+
         var string = "";
         string += '<option value="" disabled selected>Select an event</option>';
 
