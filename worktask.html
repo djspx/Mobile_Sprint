@@ -135,6 +135,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js"></script>
 <script>
+
+
     $(document).ready(function () {
         $.ajax({
             type: "GET",
@@ -148,22 +150,24 @@
     });
 
 
-    function processTask(data) {
+    function processTask() {
+        var localData = JSON.parse(window.localStorage.getItem("events")); //getting event json information from localStorage instead of json
 
-        $("#name").html(data.event[0].tasks[0].name);
 
-        var date = new Date(data.event[0].tasks[0].dateTime);
+        $("#name").html(localData.event[0].tasks[0].name);
+
+        var date = new Date(localData.event[0].tasks[0].dateTime);
         $("#due").html(date.toDateString());
 
 
-        $("#description").html(data.event[0].tasks[0].description);
+        $("#description").html(localData.event[0].tasks[0].description);
 
 
-        var notes = data.event[0].tasks[0].notes;
+        var notes = localData.event[0].tasks[0].notes;
         $("#notes").html("<textarea id='notes' class='materialize-textarea' length='255' maxlength='255'>" + notes + "</textarea>" +
         "<label class='active' for='notes'>Notes<i class='mdi-editor-mode-edit right'></i></label>");
 
-        var budget = data.event[0].tasks[0].budget;
+        var budget = localData.event[0].tasks[0].budget;
         $("#budget").append("<input type='range' id='task_budget' value='" + budget + "' min='0' max='1000'/>");
 
     }
