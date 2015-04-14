@@ -96,16 +96,18 @@
                 '&key=AIzaSyDez5ZF6K_UOr8izzd4PkXyWpAzG1dwTJQ"></iframe>' +
                 '<span class="card-title right-align"></span>' +
                 '</div>' +
+                '<form id="eventform" action="workevent.html" method="get">' +
                 '<div class="card-content">' +
-                '<h5>Next Event is ' + row.name + '</h5>' +
+                '<h5>' + row.name + '</h5>' +
 
                 '<p>Date: ' + dateStr + '</p>' +
                 '<p>Location: ' + row.venue.name + '</p>' +
                 '</div>' +
                 '<div class="card-action">' +
-                '<a href="workevent.html">Work on Event</a>' +
+                '<a href="workevent.html?eventId=' + row.id + '">Work on Event</a>' +
                 '<a href="#">Publish Event</a>' +
                 '</div>' +
+                '</form>' +
                 '</div>';
             }
         });

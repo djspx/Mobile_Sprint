@@ -108,25 +108,55 @@
                 type: "GET",
                 dataType: "json"
             })
-                    .always(function () {
-                    })
-                    .fail(function () {
-                        var events = JSON.parse(localStorage.getItem("events"));
-                        if (events != null) {
-                            populate(events);
-                        }
-                        else {
-                            alert("Event could not be populated. Please check your network connection.");
-                        }
-                    });
+            .always(function () {
+            })
+            .fail(function () {
+                var events = JSON.parse(localStorage.getItem("events"));
+                if (events != null) {
+                    populate(events);
+                }
+                else {
+                    errorAlert();
+                }
+            });
         }
 
+        function errorAlert() {
+            alert("Error occurred. Please check your network connection and refresh the page.");
+        }
+
+        var queryString = [], hash;
+        var q = document.URL.split('?')[1];
+        if (q != undefined) {
+            q = q.split('&');
+            for (var i = 0; i < q.length; i++) {
+                hash = q[i].split('=');
+                queryString.push(hash[1]);
+                queryString[hash[0]] = hash[1];
+            }
+        }
+
+
         function populate(json) {
-            var event = json.event[0];
-            var content = "";
-            var usedBudget = 0;
+            var eventId = queryString["eventId"];
+            var eventIndexId = -1;
+            var event = {};
+            $.each(json.event, function (i, row) {
+                if (row.id === eventId) {
+                    eventIndexId = i;
+                    return false;
+                }
+            });
+            if (eventIndexId != -1) {
+                event = json.event[eventIndexId];
+            } else {
+                errorAlert();
+                return false;
+            }
             $("#event-title").html(event.name);
 
+            var content = "";
+            var usedBudget = 0;
             $.each(event.tasks, function (i, task) {
                 usedBudget += parseFloat(task.budget);
                 content = content +
@@ -149,7 +179,7 @@
                 content = content +
                         " lighten-4'>" +
                             "<div class='row'>" +
-                                "<a class='hyperlink-no-style' href='worktask.html'>" +
+                                "<a class='hyperlink-no-style' href='worktask.html?taskId="+task.id+"'>" +
                                     "<div class='col s7'>" +
                                         "<h5>" + task.name + "</h5>" +
                                         "<span class='row'>" + task.description + "</span>" +
@@ -164,7 +194,7 @@
                                 "</a>" +
                                 "<div class='col s1 right-align' style='padding-left:0.75rem;padding-right:0;'>" +
                                     "<a class='btn-flat tooltipped' data-position='bottom' style='padding:0;margin:0;' data-delay='50' data-tooltip='Delete Task'><i class='mdi-content-clear'></i></a></br>" +
-                                    "<a  href='worktask.html' class='btn-flat tooltipped' style='padding:0;margin:0;' data-position='bottom' data-delay='50' data-tooltip='Edit Task'><i class='mdi-editor-mode-edit'></i></a>" +
+                                    "<a  href='worktask.html?taskId="+task.id+"' class='btn-flat tooltipped' style='padding:0;margin:0;' data-position='bottom' data-delay='50' data-tooltip='Edit Task'><i class='mdi-editor-mode-edit'></i></a>" +
                                 "</div>" +
                             "</div>" +
                         "</div>" +
