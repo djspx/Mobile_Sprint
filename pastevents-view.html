@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        <title>View Past Events</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper blue lighten-1">
+                <div class="container">
+                    <a class="brand-logo center" href="index.html">CARP Connect</a>
+                    <a data-activates="side-nav" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                    <ul class="side-nav fixed" id="side-nav">
+                        <li class="logo">
+                            <a id="logo-container" href="index.html">
+                                <img id="front-page-logo" src="images/logo.png" class="responsive-img">
+                            </a>
+                        </li>
+                        <li class="clearfix"></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="account.html">Account Management</a></li>
+                        <li><a href="calendar.html">Calendar</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#" onclick="Materialize.toast('Will forward user to Google Drive.', 4000)">Document Workspace</a></li>
+                        <li><a href="pastevents.html">View Past Events</a></li>
+                        <li><a href="reports.html">View Reports</a></li>
+                        <li class="divider"></li>
+                        <li><a href="login.html">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="row">
+                <div class="col s12 m7 l8">
+                    <h2>View Past Event</h2>
+
+                    <div class="card-panel purple lighten-5">
+                        <div class="card-content">
+                            <h5 class="card-title blue-text text-darken-2">Event Information</h5>
+                            <form id="eventform" action="pastevents.html" method="post">
+                                <table class="bordered col s12">
+                                    <tbody>
+                                        <tr>
+                                            <td class="bold">Event Name</td>
+                                            <td>Senior Financial Planning</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bold">Date</td>
+                                            <td>April 10, 2015</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bold">Venue</td>
+                                            <td>Woodbine Business Centre</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <td class="bold">Assigned / Actual Budget</td>
+                                            <td class="tooltipped" data-position="top" data-delay="50" data-tooltip="Savings of $300.00!">$2750.00 / $2450.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bold">Event Owner</td>
+                                            <td>Colin</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bold">Theme</td>
+                                            <td>Financial</td>
+                                        </tr>                                        
+                                    </tbody>
+                                </table>
+
+                                <div class="clearfix"></div>
+
+                                <h5 class="blue-text text-darken-2">Event Description</h5>
+                                <p>This event shows seniors how to save, budget and plan for the future.</p>
+                        </div>
+                    </div>
+
+                    <h5 class="blue-text text-darken-2">Task List</h5>
+
+                    <table class="striped">
+                        <thead>
+                            <tr>
+                                <th data-field="task">Task</th>
+                                <th data-field="assignedto">Assigned To</th>
+                                <th data-field="budget">Budget</th>
+                                <th data-field="due">Due Date</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td >Hire a Caterer</td>
+                                <td>Ashley Smith</td>
+                                <td>$1000</td>
+                                <td>Mar 15th</td>
+                            </tr>
+                            <tr>
+                                <td>Find a location</td>
+                                <td>John Smith</td>
+                                <td>$1250</td>
+                                <td>Mar 10th</td>
+                            </tr>
+                            <tr>
+                                <td>Hire Guest Speaker</td>
+                                <td>James Smith</td>
+                                <td>$500</td>
+                                <td>Mar 30th</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="clearfix"></div>
+
+                    <h5 class="blue-text text-darken-2">Notes</h5>
+
+                    <table class="striped ">
+                        <thead>
+                            <tr>
+                                <th data-field="name">Name</th>
+                                <th data-field="note">Note</th>
+                                <th data-field="note">Date</th>
+
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Sergio</td>
+                                <td>This event was a success!</td>
+                                <td>Apr. 9/15 - 8:45pm</td>
+                            </tr>
+                            <tr>
+                                <td>Aaron</td>
+                                <td>This event should be used as a template for future financial related events.</td>
+                                <td>Apr. 9/15 - 8:46pm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="row">
+                        <div class="input-field col s4 center">
+                            <!-- Modal Trigger -->
+                            <button class="waves-effect waves-light btn modal-trigger" href="#modal1">Add Note
+                                <i class="mdi-content-add-circle-outline left"></i>
+                            </button>
+                        </div>
+                        <div class="input-field col s8 center">
+                            <button class="btn waves-effect waves-light" type="submit" name="action">Back to Past Event List
+                                <i class="mdi-image-navigate-before left"></i>
+                            </button>
+                        </div>
+                    </div>
+                    </form>
+
+                    <!-- Modal Structure -->
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <div class="input-field">
+                                <textarea id="note" class="materialize-textarea"></textarea>
+                                <label for="note">Enter your note here</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="row col s12">
+                                <div class="input-field col s6 center">
+                                    <button class="modal-action modal-close waves-effect waves-green btn">Cancel
+                                        <i class="mdi-navigation-cancel right"></i>
+                                    </button>
+                                </div>
+                                <div class="input-field col s6 center">
+                                    <button class="modal-action modal-close waves-effect waves-green btn" onclick="Materialize.toast('Your note has been submitted!', 4000)">Submit Note
+                                        <i class="mdi-content-send right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m5 l4">
+                    <h5 class="header">Calendar</h5>
+                    <div id="calendar">
+
+                    </div>                 
+                </div>
+            </div>
+        </main>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js"></script>
+        <script>
+                                        $(document).ready(function () {
+                                            $("select").material_select();
+                                            $(".button-collapse").sideNav();
+                                            $("#calendar").fullCalendar({
+                                                contentHeight: 300
+                                            });
+                                            $("#event").change(function ()
+                                            {
+                                                document.location.href = $(this).val();
+                                            });
+                                            $('.tooltipped').tooltip({delay: 50});
+                                            $('.modal-trigger').leanModal({
+                                                dismissible: true, // Modal can be dismissed by clicking outside of the modal
+                                                opacity: .5, // Opacity of modal background
+                                                in_duration: 300, // Transition in duration
+                                                out_duration: 200 // Transition out duration
+                                            });
+                                        });
+        </script>
+    </body>
+</html>
