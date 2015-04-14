@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-    <title>CARP Connects UI Template</title>
+    <title>View Past Events</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
@@ -21,12 +21,11 @@
                     </a>
                 </li>
                 <li class="clearfix"></li>
-                <li class="active href-disabled"><a href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="account.html">Account Management</a></li>
                 <li><a href="calendar.html">Calendar</a></li>
                 <li class="divider"></li>
-                <li><a href="createevent.html">Create New Event</a></li>
-                <li><a href="pastevents.html">View Past Events</a></li>
+                <li class="active href-disabled"><a href="pastevents.html">View Past Events</a></li>
                 <li><a href="reports.html">View Reports</a></li>
                 <li class="divider"></li>
                 <li><a href="login.html">Log Out</a></li>
@@ -36,10 +35,21 @@
 </nav>
 <main>
     <div class="row">
-        <div class="col s12 m7 l8" id="card-content">
+        <div class="col s12 m7 l8">
+            <h2>View Past Events</h2>
 
+            <p>Select an event to show information for.</p>
 
+            <form id="eventform" action="pastevents-view.html" method="post">
+                <div class="row">
+                    <div class="input-field col s8">
+                        <select id="event">
 
+                        </select>
+                        <label>Events</label>
+                    </div>
+                </div>
+            </form>
         </div>
         <div class="col s12 m5 l4">
             <h5 class="header">Calendar</h5>
@@ -56,6 +66,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js"></script>
 <script>
     $(document).ready(function () {
+        $("select").material_select();
         $(".button-collapse").sideNav();
         $("#calendar").fullCalendar({
             contentHeight: 300
@@ -72,47 +83,35 @@
         });
     });
 
+    $("#event").change(function () {
+        $('#eventform').trigger('submit');
+    });
+
     var event = {};
 
-    function process(result) {
-        $("#card-content").empty();
+    var monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
 
+    function process(result) {
         event = result.event;
         var string = "";
+        string += '<option value="" disabled selected>Select an event</option>';
 
         $.each(event, function (i, row) {
-            if (row.status == "In Progress") {
-                var date = new Date(row.dateTime);
-                var dateStr = date.toDateString();
+            var date = new Date(row.dateTime);
+            month = monthNames[date.getMonth()].toString();
+            day = date.getDay();
+            year = date.getFullYear();
+            var dateStr = month + " " + day + ", " + year;
 
-                string += '<div class="card">' +
-                '<div class="card-image">' +
-                '<iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=' +
-                encodeURIComponent(row.venue.name.trim()) +
-                encodeURIComponent(row.venue.address.city.trim()) + ',' +
-                encodeURIComponent(row.venue.address.provinceState.trim()) + ',' +
-                encodeURIComponent(row.venue.address.postalZipCode.trim()) + ',' +
-                encodeURIComponent(row.venue.address.country.trim()) +
-                '&key=AIzaSyDez5ZF6K_UOr8izzd4PkXyWpAzG1dwTJQ"></iframe>' +
-                '<span class="card-title right-align"></span>' +
-                '</div>' +
-                '<div class="card-content">' +
-                '<h5>Next Event is ' + row.name + '</h5>' +
-
-                '<p>Date: ' + dateStr + '</p>' +
-                '<p>Location: ' + row.venue.name + '</p>' +
-                '</div>' +
-                '<div class="card-action">' +
-                '<a href="workevent.html">Work on Event</a>' +
-                '<a href="#">Publish Event</a>' +
-                '</div>' +
-                '</div>';
+            if (row.status == "Complete") {
+                string += '<option value="' + row.id + '">' + row.name + ' (' + dateStr + ')</option>';
             }
         });
-
-        $("#card-content").append(string);
+        $("#event").append(string);
+        $('select').material_select();
     }
-
 </script>
 </body>
 </html>

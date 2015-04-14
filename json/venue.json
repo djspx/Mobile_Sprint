@@ -2,27 +2,27 @@
    "venue":[
       {
          "venueId":"1",
-         "name":"string",
+         "name":"Massey Hall",
          "description":"string",
 		 "parkingAvailability":"boolean",
 		 "publicTransportationAccess":"boolean",
-		 "address":"Address",
+		 "address":"Address"
       },
       {
          "venueId":"2",
-         "name":"string",
+         "name":"Mississauga Community Centre",
          "description":"string",
 		 "parkingAvailability":"boolean",
 		 "publicTransportationAccess":"boolean",
-		 "address":"Address",
+		 "address":"Address"
       },
       {
          "venueId":"3",
-         "name":"string",
+         "name":"Sheridan College",
          "description":"string",
 		 "parkingAvailability":"boolean",
 		 "publicTransportationAccess":"boolean",
-		 "address":"Address",
+		 "address":"Address"
       }
    ]
 }
