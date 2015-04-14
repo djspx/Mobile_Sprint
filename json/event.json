@@ -83,7 +83,7 @@
           "taskType": "Vendor",
           "Vendor": "Bobs Food Service",
           "budget": "350.00",
-          "status": "Incomplete"
+          "status": "In Progress"
         }
       ],
       "venue": {
@@ -123,7 +123,7 @@
           "taskType": "Vendor",
           "Vendor": "Bobs Food Service",
           "budget": "350.00",
-          "status": "Incomplete"
+          "status": "In Progress"
         }
       ],
       "venue": {
@@ -164,7 +164,7 @@
           "taskType": "Vendor",
           "Vendor": "Bobs Food Service",
           "budget": "350.00",
-          "status": "Incomplete"
+          "status": "In Progress"
         }
       ],
       "venue": {
@@ -199,7 +199,7 @@
           "taskId": "1",
           "name": "Hire Caterer",
           "description": "Hire a caterer for 50-75 people",
-          "notes": "In talks with caterer, waiting on an estimate",
+          "notes": "In talks with caterer, waiting on an estimate. Estimate received and approved.",
           "userIdAssignedTo": "1",
           "dateTime": "2015-03-10T04:00:00",
           "taskType": "Vendor",
@@ -211,6 +211,7 @@
           "taskId": "2",
           "name": "Book Venue for Event",
           "description": "Approximately 100 guests are attending, please book a hall to accommodate this in the Oakville area.",
+          "notes": "Require more information regarding guests and type of seating.",
           "userIdAssignedTo": "1",
           "dateTime": "2015-04-20T04:00:00",
           "taskType": "Vendor",
@@ -222,6 +223,7 @@
           "taskId": "3",
           "name": "Hire a Guest Speaker",
           "description": "A Subject Matter Expert (SME) is required in the field of financial planning.",
+          "notes": "",
           "userIdAssignedTo": "1",
           "dateTime": "2015-04-25T04:00:00",
           "taskType": "Vendor",
@@ -262,7 +264,7 @@
           "taskId": "1",
           "name": "Hire Caterer",
           "description": "Hire a caterer for 50-75 people",
-          "notes": "In talks with caterer, waiting on an estimate",
+          "notes": "In talks with caterer, waiting on an estimate. Estimate received and approved.",
           "userIdAssignedTo": "1",
           "dateTime": "2015-03-10T04:00:00",
           "taskType": "Vendor",
@@ -274,6 +276,7 @@
           "taskId": "2",
           "name": "Book Venue for Event",
           "description": "Approximately 100 guests are attending, please book a hall to accommodate this in the Oakville area.",
+          "notes": "Hall contacted.",
           "userIdAssignedTo": "1",
           "dateTime": "2015-04-20T04:00:00",
           "taskType": "Vendor",
@@ -285,6 +288,7 @@
           "taskId": "3",
           "name": "Hire a Guest Speaker",
           "description": "A Subject Matter Expert (SME) is required in the field of financial planning.",
+          "notes": "",
           "userIdAssignedTo": "1",
           "dateTime": "2015-04-25T04:00:00",
           "taskType": "Vendor",
@@ -331,7 +335,7 @@
           "taskType": "Vendor",
           "Vendor": "Bobs Food Service",
           "budget": "350.00",
-          "status": "Incomplete"
+          "status": "In Progress"
         }
       ],
       "venue": {

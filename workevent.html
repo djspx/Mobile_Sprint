@@ -49,7 +49,7 @@
                         <h4>Assigned Tasks</h4>
                     </div>
                     <div class="col s2 right-align">
-                        <h4><a href="addtask.html" class="btn-floating tooltipped" data-position="bottom"
+                        <h4><a href="#" id="addtask" class="btn-floating tooltipped" data-position="bottom"
                                data-delay="50" data-tooltip="Add Task"><i class="mdi-content-add"></i></a></h4>
                     </div>
                 </div>
@@ -136,7 +136,6 @@
             }
         }
 
-
         function populate(json) {
             var eventId = queryString["eventId"];
             var eventIndexId = -1;
@@ -154,6 +153,7 @@
                 return false;
             }
             $("#event-title").html(event.name);
+            $("#addtask").attr("href", "addtask.html?eventId="+eventId);
 
             var content = "";
             var usedBudget = 0;
@@ -179,7 +179,7 @@
                 content = content +
                         " lighten-4'>" +
                             "<div class='row'>" +
-                                "<a class='hyperlink-no-style' href='worktask.html?taskId="+task.id+"'>" +
+                                "<a class='hyperlink-no-style' href='worktask.html?eventId="+eventId+"&taskId="+task.taskId+"'>" +
                                     "<div class='col s7'>" +
                                         "<h5>" + task.name + "</h5>" +
                                         "<span class='row'>" + task.description + "</span>" +
@@ -194,7 +194,7 @@
                                 "</a>" +
                                 "<div class='col s1 right-align' style='padding-left:0.75rem;padding-right:0;'>" +
                                     "<a class='btn-flat tooltipped' data-position='bottom' style='padding:0;margin:0;' data-delay='50' data-tooltip='Delete Task'><i class='mdi-content-clear'></i></a></br>" +
-                                    "<a  href='worktask.html?taskId="+task.id+"' class='btn-flat tooltipped' style='padding:0;margin:0;' data-position='bottom' data-delay='50' data-tooltip='Edit Task'><i class='mdi-editor-mode-edit'></i></a>" +
+                                    "<a href='worktask.html?eventId="+eventId+"&taskId="+task.taskId+"' class='btn-flat tooltipped' style='padding:0;margin:0;' data-position='bottom' data-delay='50' data-tooltip='Edit Task'><i class='mdi-editor-mode-edit'></i></a>" +
                                 "</div>" +
                             "</div>" +
                         "</div>" +
