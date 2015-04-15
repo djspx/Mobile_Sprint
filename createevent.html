@@ -283,24 +283,24 @@
     });
 
     $("#taskform").submit(function () {
-        var task = {};
-        task.name = $("#task_name").val();
-        task.assignedTo = $("#assignedTo option:selected").text();
-        task.budget = parseInt($("#task_budget").val(), 10);
-        task.duedate = $("#due_date").val();
+        var Task = {};
+        Task.name = $("#task_name").val();
+        Task.assignedTo = $("#assignedTo option:selected").text();
+        Task.budget = parseInt($("#task_budget").val(), 10);
+        Task.duedate = $("#due_date").val();
 
         string = "";
         string += '<tr>' +
-        '<td>' + task.name + '</td>' +
-        '<td>' + task.assignedTo + '</td>' +
-        '<td>$' + task.budget + '</td>' +
-        '<td>' + task.duedate + '</td>' +
+        '<td>' + Task.name + '</td>' +
+        '<td>' + Task.assignedTo + '</td>' +
+        '<td>$' + Task.budget + '</td>' +
+        '<td>' + Task.duedate + '</td>' +
         '</tr>';
 
         $("#tasktable tbody").append(string);
 
         var budget = parseInt($("#budget_running").text(), 10);
-        budget += task.budget;
+        budget += Task.budget;
         $("#budget_running").html(budget);
 
         $('#modal1').closeModal();
