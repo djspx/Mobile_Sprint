@@ -151,7 +151,7 @@
                     true
             );
             //adding tasks
-            for (j = 0; result.event[i].tasks.length > j; j++) {
+            for (j = 0; j < result.event[i].tasks.length; j++) {
                 var date1 = new Date(result.event[i].tasks[j].dateTime);
                 var title1 = result.event[i].tasks[j].name;
                 var taskUrl = "worktask.html?eventId=" + result.event[i].id + "&taskId=" + result.event[i].tasks[j].taskId;
@@ -167,16 +167,8 @@
                 );
             }
 
-            calendar.fullCalendar({
-                eventMouseover: function () {
-                    Materialize.toast('I am a toast!', 4000); // 4000 is the duration of the toas
-                },
-                eventMouseout: function () {
-                    $(this).css('border-color', 'red');
-                }
-            });
-
         }
+
     }
 
 </script>
