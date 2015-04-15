@@ -58,19 +58,36 @@
         });
 
 
-        $.ajax({
-            type: "GET",
-            url: "json/event.json",
-            dataType: "json",
-            success: fillCalendar,
-            error: function () {
-                alert("error");
-            }
+        getEvents().done(function (json) {
+            localStorage.setItem("events", JSON.stringify(json));
+            populate(json);
         });
     });
 
+    function getEvents() {
+        return $.ajax({
+            url: "json/event.json",
+            type: "GET",
+            dataType: "json"
+        })
+                .always(function () {
+                })
+                .fail(function () {
+                    var events = JSON.parse(localStorage.getItem("events"));
+                    if (events != null) {
+                        populate(events);
+                    }
+                    else {
+                        errorAlert();
+                    }
+                });
+    }
 
-    function fillCalendar(data) {
+    function errorAlert() {
+        alert("Error occurred. Please check your network connection and refresh the page.");
+    }
+
+    function populate(data) {
 
         var calendar = $('#calendar').fullCalendar();
 
