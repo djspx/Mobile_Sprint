@@ -272,17 +272,17 @@
     });
 
     $("#noteform").submit(function () {
-        var note = {};
-        note.name = "John Smith";
-        note.note = $("#note").val();
-        note.date = new Date();
+        var Note = {};
+        Note.name = "John Smith";
+        Note.content = $("#note").val();
+        Note.date = new Date();
 
-        var dateStr = note.date.toLocaleString();
+        var dateStr = Note.date.toLocaleString();
 
         string = "";
         string += '<tr>' +
-        '<td>' + note.name + '</td>' +
-        '<td>' + note.note + '</td>' +
+        '<td>' + Note.name + '</td>' +
+        '<td>' + Note.content + '</td>' +
         '<td>' + dateStr + '</td>' +
         '</tr>';
 
