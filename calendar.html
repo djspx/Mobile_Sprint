@@ -95,8 +95,7 @@
         for (i = 0; data.event.length > i; i++) {
             var date = new Date(data.event[i].dateTime);
             var title = data.event[i].name;
-            var eventUrl = "workevent.html";
-            var taskUrl = "worktask.html";
+            var eventUrl = "workevent.html?eventId=" + data.event[i].id;
 
             calendar.fullCalendar('renderEvent',
                     {
@@ -109,9 +108,11 @@
                     true
             );
             //adding tasks
+
             for (ii = 0; data.event[i].tasks.length > ii; ii++) {
                 var date1 = new Date(data.event[i].tasks[ii].dateTime);
                 var title1 = data.event[i].tasks[ii].name;
+                var taskUrl = "worktask.html?eventId=" + data.event[i].id + "&taskId=" + data.event[i].tasks[ii].taskId;
 
                 calendar.fullCalendar('renderEvent',
                         {
