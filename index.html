@@ -133,41 +133,38 @@
         $("#card-content").append(string);
 
         var calendar = $('#calendar').fullCalendar();
+        var events=new Array();
 
         //adding events
-        for (i = 0; i < result.event.length; i++) {
+        for (i = 0; result.event.length > i; i++) {
             var date = new Date(result.event[i].dateTime);
             var title = result.event[i].name;
             var eventUrl = "workevent.html?eventId=" + result.event[i].id;
 
-            calendar.fullCalendar('renderEvent',
-                    {
-                        title: title,
-                        start: date,
-                        url: eventUrl,
-                        color: "#99CCFF",
-                        allDay: false
-                    },
-                    true
-            );
+            list = new Object();
+            list.title = title; // this should be string
+            list.start = date; // this should be date object
+            list.url = eventUrl;
+            list.color = "#99CCFF";
+            list.allDay = false;
+            events.push(list);
+
             //adding tasks
-            for (j = 0; j < result.event[i].tasks.length; j++) {
-                var date1 = new Date(result.event[i].tasks[j].dateTime);
-                var title1 = result.event[i].tasks[j].name;
-                var taskUrl = "worktask.html?eventId=" + result.event[i].id + "&taskId=" + result.event[i].tasks[j].taskId;
+            for (ii = 0; result.event[i].tasks.length > ii; ii++) {
+                var date1 = new Date(result.event[i].tasks[ii].dateTime);
+                var title1 = result.event[i].tasks[ii].name;
+                var taskUrl = "worktask.html?eventId=" + result.event[i].id + "&taskId=" + result.event[i].tasks[ii].taskId;
 
-                calendar.fullCalendar('renderEvent',
-                        {
-                            title: title1,
-                            start: date1,
-                            url: taskUrl,
-                            allDay: false
-                        },
-                        true
-                );
+                list1 = new Object();
+                list1.title = title1; // this should be string
+                list1.start = date1; // this should be date object
+                list1.url = taskUrl;
+                list1.allDay = false;
+                events.push(list1);
             }
-
         }
+        calendar.fullCalendar('addEventSource', events);
+        $('#calendar').fullCalendar('rerenderEvents');
 
     }
 
