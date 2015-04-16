@@ -120,7 +120,7 @@
 
 
     function processUser(data) {
-
+//this is creating a var for the name of the user logged in
         var name = data.user[0].firstName + " " + data.user[0].lastName;
         $("#name").html("<input id='name' type='text' value='" + name + "'>" + "<label class='active' for='name'>Display Name</label>");
         $("#headerName").html(name + "'s Profile");
