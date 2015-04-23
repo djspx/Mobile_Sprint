@@ -95,6 +95,7 @@
             $('select').material_select();
             $('.tooltipped').tooltip({delay: 50});
 
+            // showcasing javascript promise
             getEvents().done(function (json) {
                 localStorage.setItem("events", JSON.stringify(json));
                 populate(json);
