@@ -125,6 +125,7 @@
             year = date.getFullYear();
             var dateStr = month + " " + day + ", " + year;
 
+            // look for and add only completed events
             if (row.status == "Complete") {
                 string += '<option value="' + row.id + '">' + row.name + ' (' + dateStr + ')</option>';
             }
