@@ -38,6 +38,8 @@ function drawTemplate() {
     $("nav").append("<div class='nav-wrapper blue lighten-1'>" +
         "<div class='container'>" +
         "<a class='brand-logo center' href='index.html'>CARP Connect</a>" +
+        "</div>" +
+
         "<a data-activates='side-nav' class='button-collapse'><i class='mdi-navigation-menu'></i></a>" +
         "<ul class='side-nav fixed' id='side-nav'>" +
         "<li class='logo'>" +
@@ -56,7 +58,6 @@ function drawTemplate() {
         "<li class='divider'></li>" +
         "<li><a href='login.html'>Log Out</a></li>" +
         "</ul>" +
-        "</div>" +
         "</div>");
 }
 
